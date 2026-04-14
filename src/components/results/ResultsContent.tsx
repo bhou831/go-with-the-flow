@@ -5,9 +5,10 @@ import Link from 'next/link';
 import citiesData from '@/data/cities.json';
 import { findMatchingCity } from '@/lib/scoring';
 import CityReveal from './CityReveal';
-import type { City, RecordedAnswer } from '@/lib/types';
+import { CitiesSchema, RecordedAnswersSchema } from '@/lib/validation';
+import type { City } from '@/lib/types';
 
-const cities = citiesData as City[];
+const cities = CitiesSchema.parse(citiesData) as City[];
 
 export default function ResultsContent() {
   const searchParams = useSearchParams();
@@ -24,9 +25,9 @@ export default function ResultsContent() {
     );
   }
 
-  let answers: RecordedAnswer[];
+  let answers: ReturnType<typeof RecordedAnswersSchema.parse>;
   try {
-    answers = JSON.parse(atob(encoded)) as RecordedAnswer[];
+    answers = RecordedAnswersSchema.parse(JSON.parse(atob(encoded)));
   } catch {
     return (
       <main className="flex flex-col items-center justify-center min-h-screen px-6 text-center">

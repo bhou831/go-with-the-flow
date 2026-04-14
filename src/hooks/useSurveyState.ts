@@ -23,7 +23,8 @@ export function useSurveyState(questions: Question[]) {
     });
   };
 
-  const reset = () => dispatch({ type: 'RESET' });
+  const goBack = () => dispatch({ type: 'BACK' });
+  const reset  = () => dispatch({ type: 'RESET' });
 
   return {
     currentQuestion: questions[state.currentIndex] ?? null,
@@ -31,6 +32,7 @@ export function useSurveyState(questions: Question[]) {
     totalQuestions: questions.length,
     answers: state.answers,
     handleAnswer,
+    goBack,
     reset,
   };
 }

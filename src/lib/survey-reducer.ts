@@ -24,6 +24,7 @@ export type SurveyAction =
         totalQuestions: number;
       };
     }
+  | { type: 'BACK' }
   | { type: 'RESET' };
 
 // ─── Reducer ──────────────────────────────────────────────────────────────────
@@ -41,6 +42,15 @@ export function surveyReducer(state: SurveyState, action: SurveyAction): SurveyS
         answers: newAnswers,
         currentIndex: nextIndex,
         phase: nextIndex >= totalQuestions ? 'done' : 'survey',
+      };
+    }
+    case 'BACK': {
+      if (state.currentIndex <= 0) return state;
+      return {
+        ...state,
+        currentIndex: state.currentIndex - 1,
+        answers: state.answers.slice(0, -1),
+        phase: 'survey',
       };
     }
     case 'RESET':

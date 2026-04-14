@@ -1,8 +1,8 @@
 import questionsData from '@/data/questions.json';
 import SurveyContainer from '@/components/survey/SurveyContainer';
-import type { Question } from '@/lib/types';
+import { QuestionsSchema } from '@/lib/validation';
 
 export default function SurveyPage() {
-  const questions = questionsData as Question[];
+  const questions = QuestionsSchema.parse(questionsData);
   return <SurveyContainer questions={questions} />;
 }

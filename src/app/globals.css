@@ -24,3 +24,17 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* ── shadcn-compatible dark-mode CSS variables ── */
+.dark {
+  --background: oklch(0 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.1 0 0);
+  --card-foreground: oklch(1 0 0);
+  --muted: oklch(0.3 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.3 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+}
