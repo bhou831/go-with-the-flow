@@ -1,0 +1,86 @@
+[
+  {
+    "id": "nyc",
+    "name": "New York City",
+    "country": "USA",
+    "tagline": "The city that never sleeps",
+    "accentColor": "#1a1a2e",
+    "scores": {
+      "transit": 9,
+      "density": 10,
+      "vibe": 8,
+      "cost": 2,
+      "climate": 5
+    }
+  },
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "tagline": "Precision, pulse, and perfect ramen",
+    "accentColor": "#c1121f",
+    "scores": {
+      "transit": 10,
+      "density": 9,
+      "vibe": 7,
+      "cost": 4,
+      "climate": 6
+    }
+  },
+  {
+    "id": "amsterdam",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "tagline": "Bikes, canals, and radical calm",
+    "accentColor": "#e76f51",
+    "scores": {
+      "transit": 7,
+      "density": 6,
+      "vibe": 8,
+      "cost": 5,
+      "climate": 5
+    }
+  },
+  {
+    "id": "los-angeles",
+    "name": "Los Angeles",
+    "country": "USA",
+    "tagline": "Sun, sprawl, and eternal optimism",
+    "accentColor": "#f4a261",
+    "scores": {
+      "transit": 3,
+      "density": 3,
+      "vibe": 7,
+      "cost": 3,
+      "climate": 9
+    }
+  },
+  {
+    "id": "vienna",
+    "name": "Vienna",
+    "country": "Austria",
+    "tagline": "Coffee houses and quiet grandeur",
+    "accentColor": "#457b9d",
+    "scores": {
+      "transit": 8,
+      "density": 6,
+      "vibe": 6,
+      "cost": 6,
+      "climate": 6
+    }
+  },
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "tagline": "Efficient, tropical, impossibly clean",
+    "accentColor": "#2d6a4f",
+    "scores": {
+      "transit": 9,
+      "density": 8,
+      "vibe": 6,
+      "cost": 3,
+      "climate": 5
+    }
+  }
+]

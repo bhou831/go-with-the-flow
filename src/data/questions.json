@@ -1,0 +1,262 @@
+[
+  {
+    "id": "q1-urban-form",
+    "type": "visual-comparison",
+    "prompt": "Which city layout speaks to you?",
+    "left": {
+      "label": "Dense Grid",
+      "description": "Towering blocks, shoulder-to-shoulder streets, energy on every corner",
+      "bgClass": "bg-slate-800",
+      "weights": [
+        { "dimension": "density", "value": 9 },
+        { "dimension": "transit", "value": 8 }
+      ]
+    },
+    "right": {
+      "label": "Open Sprawl",
+      "description": "Wide roads, front lawns, space to breathe between destinations",
+      "bgClass": "bg-amber-100",
+      "weights": [
+        { "dimension": "density", "value": 2 },
+        { "dimension": "transit", "value": 2 }
+      ]
+    }
+  },
+  {
+    "id": "q2-transport",
+    "type": "multi-choice-grid",
+    "prompt": "Your ideal way to get around?",
+    "options": [
+      {
+        "id": "subway",
+        "label": "Subway",
+        "icon": "🚇",
+        "weights": [
+          { "dimension": "transit", "value": 10 },
+          { "dimension": "density", "value": 8 }
+        ]
+      },
+      {
+        "id": "driving",
+        "label": "Driving",
+        "icon": "🚗",
+        "weights": [
+          { "dimension": "transit", "value": 1 },
+          { "dimension": "density", "value": 2 }
+        ]
+      },
+      {
+        "id": "walking",
+        "label": "Walking",
+        "icon": "🚶",
+        "weights": [
+          { "dimension": "transit", "value": 6 },
+          { "dimension": "density", "value": 7 },
+          { "dimension": "vibe", "value": 7 }
+        ]
+      },
+      {
+        "id": "cycling",
+        "label": "Cycling",
+        "icon": "🚲",
+        "weights": [
+          { "dimension": "transit", "value": 7 },
+          { "dimension": "vibe", "value": 8 },
+          { "dimension": "density", "value": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q3-elevator",
+    "type": "mini-game",
+    "prompt": "You step into an elevator. Two strangers are already inside.",
+    "sceneDescription": "The doors close. Floor numbers tick upward. Nobody speaks.",
+    "actions": [
+      {
+        "id": "wave",
+        "label": "Wave and smile",
+        "revealText": "You light up every room — and every elevator.",
+        "weights": [
+          { "dimension": "vibe", "value": 9 },
+          { "dimension": "density", "value": 7 }
+        ]
+      },
+      {
+        "id": "nod",
+        "label": "Nod politely",
+        "revealText": "Courteous but measured. You know the rules.",
+        "weights": [
+          { "dimension": "vibe", "value": 5 },
+          { "dimension": "density", "value": 5 }
+        ]
+      },
+      {
+        "id": "ignore",
+        "label": "Stare at your phone",
+        "revealText": "Eyes forward, headphones in, zero excuses.",
+        "weights": [
+          { "dimension": "vibe", "value": 3 },
+          { "dimension": "density", "value": 9 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q4-architecture",
+    "type": "visual-comparison",
+    "prompt": "What kind of streets do you dream about?",
+    "left": {
+      "label": "Historic Charm",
+      "description": "Cobblestones, ornate facades, centuries of stories baked into every wall",
+      "bgClass": "bg-stone-300",
+      "weights": [
+        { "dimension": "vibe", "value": 7 },
+        { "dimension": "density", "value": 6 },
+        { "dimension": "cost", "value": 6 }
+      ]
+    },
+    "right": {
+      "label": "Glass & Steel",
+      "description": "Gleaming towers, smart infrastructure, the future already arrived",
+      "bgClass": "bg-sky-900",
+      "weights": [
+        { "dimension": "vibe", "value": 5 },
+        { "dimension": "density", "value": 8 },
+        { "dimension": "transit", "value": 8 }
+      ]
+    }
+  },
+  {
+    "id": "q5-climate",
+    "type": "multi-choice-grid",
+    "prompt": "Pick your perfect weather.",
+    "options": [
+      {
+        "id": "tropical",
+        "label": "Hot & Humid",
+        "icon": "🌴",
+        "weights": [
+          { "dimension": "climate", "value": 9 }
+        ]
+      },
+      {
+        "id": "sunny",
+        "label": "Warm & Sunny",
+        "icon": "☀️",
+        "weights": [
+          { "dimension": "climate", "value": 8 }
+        ]
+      },
+      {
+        "id": "temperate",
+        "label": "Four Seasons",
+        "icon": "🍂",
+        "weights": [
+          { "dimension": "climate", "value": 5 }
+        ]
+      },
+      {
+        "id": "cool",
+        "label": "Cool & Crisp",
+        "icon": "❄️",
+        "weights": [
+          { "dimension": "climate", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q6-food",
+    "type": "visual-comparison",
+    "prompt": "Your ideal Friday night meal?",
+    "left": {
+      "label": "Street Food",
+      "description": "A plastic stool, a steaming bowl, the best meal you've ever had for $4",
+      "bgClass": "bg-orange-400",
+      "weights": [
+        { "dimension": "vibe", "value": 8 },
+        { "dimension": "cost", "value": 7 },
+        { "dimension": "density", "value": 7 }
+      ]
+    },
+    "right": {
+      "label": "Wine Bar",
+      "description": "Natural wine, charcuterie, a room that hums with quiet conversation",
+      "bgClass": "bg-rose-900",
+      "weights": [
+        { "dimension": "vibe", "value": 6 },
+        { "dimension": "cost", "value": 4 },
+        { "dimension": "density", "value": 5 }
+      ]
+    }
+  },
+  {
+    "id": "q7-pace",
+    "type": "multi-choice-grid",
+    "prompt": "Choose your city pace.",
+    "options": [
+      {
+        "id": "hustle",
+        "label": "Always On",
+        "icon": "⚡",
+        "weights": [
+          { "dimension": "density", "value": 9 },
+          { "dimension": "vibe", "value": 8 }
+        ]
+      },
+      {
+        "id": "efficient",
+        "label": "Efficient",
+        "icon": "🎯",
+        "weights": [
+          { "dimension": "transit", "value": 9 },
+          { "dimension": "density", "value": 7 }
+        ]
+      },
+      {
+        "id": "relaxed",
+        "label": "Relaxed",
+        "icon": "🌿",
+        "weights": [
+          { "dimension": "density", "value": 4 },
+          { "dimension": "vibe", "value": 7 },
+          { "dimension": "cost", "value": 7 }
+        ]
+      },
+      {
+        "id": "spontaneous",
+        "label": "Spontaneous",
+        "icon": "🎲",
+        "weights": [
+          { "dimension": "vibe", "value": 9 },
+          { "dimension": "density", "value": 6 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q8-budget",
+    "type": "visual-comparison",
+    "prompt": "How do you feel about the cost of living?",
+    "left": {
+      "label": "Pay for the Experience",
+      "description": "Money is just fuel — the city's energy is worth every cent",
+      "bgClass": "bg-violet-800",
+      "weights": [
+        { "dimension": "cost", "value": 2 },
+        { "dimension": "density", "value": 8 },
+        { "dimension": "vibe", "value": 8 }
+      ]
+    },
+    "right": {
+      "label": "Value Matters",
+      "description": "Great city, great life — without burning your savings every month",
+      "bgClass": "bg-green-700",
+      "weights": [
+        { "dimension": "cost", "value": 8 },
+        { "dimension": "density", "value": 5 }
+      ]
+    }
+  }
+]
