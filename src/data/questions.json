@@ -1,262 +1,753 @@
 [
   {
-    "id": "q1-urban-form",
+    "id": "q1-escalator",
+    "type": "multi-choice-grid",
+    "prompt": "Does this bother you?",
+    "options": [
+      {
+        "id": "same-side",
+        "label": "Yes, they should all be on the same side",
+        "icon": "😤",
+        "weights": [
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "balance", "value": 3 },
+          { "dimension": "transit", "value": 7 }
+        ]
+      },
+      {
+        "id": "dislike-stance",
+        "label": "No, but I don't like the way they are standing",
+        "icon": "🤷",
+        "weights": [
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "hustle", "value": 7 }
+        ]
+      },
+      {
+        "id": "no-problem",
+        "label": "No, what's the problem?",
+        "icon": "😌",
+        "weights": [
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q2-neighbor-music",
+    "type": "multi-choice-grid",
+    "prompt": "You can hear your neighbor practicing violin through the wall. Your reaction?",
+    "options": [
+      {
+        "id": "love-it",
+        "label": "I love it — it makes the city feel alive",
+        "icon": "🎵",
+        "weights": [
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "density", "value": 8 },
+          { "dimension": "safety", "value": 3 }
+        ]
+      },
+      {
+        "id": "fine-with-curfew",
+        "label": "Fine, as long as they stop by 9:00 PM sharp",
+        "icon": "🕙",
+        "weights": [
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "openness", "value": 3 },
+          { "dimension": "hustle", "value": 7 }
+        ]
+      },
+      {
+        "id": "shouldnt-hear",
+        "label": "I shouldn't be able to hear my neighbors at all",
+        "icon": "🏠",
+        "weights": [
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "cost", "value": 8 },
+          { "dimension": "density", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q3-city-layout",
     "type": "visual-comparison",
     "prompt": "Which city layout speaks to you?",
     "left": {
       "label": "Dense Grid",
       "description": "Towering blocks, shoulder-to-shoulder streets, energy on every corner",
       "bgClass": "bg-slate-800",
+      "image": "/nyc.png",
       "weights": [
-        { "dimension": "density", "value": 9 },
-        { "dimension": "transit", "value": 8 }
+        { "dimension": "transit", "value": 8 },
+        { "dimension": "hustle", "value": 8 },
+        { "dimension": "culture", "value": 7 },
+        { "dimension": "cost", "value": 2 }
       ]
     },
     "right": {
       "label": "Open Sprawl",
       "description": "Wide roads, front lawns, space to breathe between destinations",
       "bgClass": "bg-amber-100",
+      "image": "/nyc.png",
       "weights": [
-        { "dimension": "density", "value": 2 },
-        { "dimension": "transit", "value": 2 }
-      ]
-    }
-  },
-  {
-    "id": "q2-transport",
-    "type": "multi-choice-grid",
-    "prompt": "Your ideal way to get around?",
-    "options": [
-      {
-        "id": "subway",
-        "label": "Subway",
-        "icon": "🚇",
-        "weights": [
-          { "dimension": "transit", "value": 10 },
-          { "dimension": "density", "value": 8 }
-        ]
-      },
-      {
-        "id": "driving",
-        "label": "Driving",
-        "icon": "🚗",
-        "weights": [
-          { "dimension": "transit", "value": 1 },
-          { "dimension": "density", "value": 2 }
-        ]
-      },
-      {
-        "id": "walking",
-        "label": "Walking",
-        "icon": "🚶",
-        "weights": [
-          { "dimension": "transit", "value": 6 },
-          { "dimension": "density", "value": 7 },
-          { "dimension": "vibe", "value": 7 }
-        ]
-      },
-      {
-        "id": "cycling",
-        "label": "Cycling",
-        "icon": "🚲",
-        "weights": [
-          { "dimension": "transit", "value": 7 },
-          { "dimension": "vibe", "value": 8 },
-          { "dimension": "density", "value": 5 }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "q3-elevator",
-    "type": "mini-game",
-    "prompt": "You step into an elevator. Two strangers are already inside.",
-    "sceneDescription": "The doors close. Floor numbers tick upward. Nobody speaks.",
-    "actions": [
-      {
-        "id": "wave",
-        "label": "Wave and smile",
-        "revealText": "You light up every room — and every elevator.",
-        "weights": [
-          { "dimension": "vibe", "value": 9 },
-          { "dimension": "density", "value": 7 }
-        ]
-      },
-      {
-        "id": "nod",
-        "label": "Nod politely",
-        "revealText": "Courteous but measured. You know the rules.",
-        "weights": [
-          { "dimension": "vibe", "value": 5 },
-          { "dimension": "density", "value": 5 }
-        ]
-      },
-      {
-        "id": "ignore",
-        "label": "Stare at your phone",
-        "revealText": "Eyes forward, headphones in, zero excuses.",
-        "weights": [
-          { "dimension": "vibe", "value": 3 },
-          { "dimension": "density", "value": 9 }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "q4-architecture",
-    "type": "visual-comparison",
-    "prompt": "What kind of streets do you dream about?",
-    "left": {
-      "label": "Historic Charm",
-      "description": "Cobblestones, ornate facades, centuries of stories baked into every wall",
-      "bgClass": "bg-stone-300",
-      "weights": [
-        { "dimension": "vibe", "value": 7 },
-        { "dimension": "density", "value": 6 },
-        { "dimension": "cost", "value": 6 }
-      ]
-    },
-    "right": {
-      "label": "Glass & Steel",
-      "description": "Gleaming towers, smart infrastructure, the future already arrived",
-      "bgClass": "bg-sky-900",
-      "weights": [
-        { "dimension": "vibe", "value": 5 },
-        { "dimension": "density", "value": 8 },
-        { "dimension": "transit", "value": 8 }
-      ]
-    }
-  },
-  {
-    "id": "q5-climate",
-    "type": "multi-choice-grid",
-    "prompt": "Pick your perfect weather.",
-    "options": [
-      {
-        "id": "tropical",
-        "label": "Hot & Humid",
-        "icon": "🌴",
-        "weights": [
-          { "dimension": "climate", "value": 9 }
-        ]
-      },
-      {
-        "id": "sunny",
-        "label": "Warm & Sunny",
-        "icon": "☀️",
-        "weights": [
-          { "dimension": "climate", "value": 8 }
-        ]
-      },
-      {
-        "id": "temperate",
-        "label": "Four Seasons",
-        "icon": "🍂",
-        "weights": [
-          { "dimension": "climate", "value": 5 }
-        ]
-      },
-      {
-        "id": "cool",
-        "label": "Cool & Crisp",
-        "icon": "❄️",
-        "weights": [
-          { "dimension": "climate", "value": 2 }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "q6-food",
-    "type": "visual-comparison",
-    "prompt": "Your ideal Friday night meal?",
-    "left": {
-      "label": "Street Food",
-      "description": "A plastic stool, a steaming bowl, the best meal you've ever had for $4",
-      "bgClass": "bg-orange-400",
-      "weights": [
-        { "dimension": "vibe", "value": 8 },
+        { "dimension": "nature", "value": 8 },
+        { "dimension": "transit", "value": 2 },
+        { "dimension": "hustle", "value": 3 },
         { "dimension": "cost", "value": 7 },
-        { "dimension": "density", "value": 7 }
-      ]
-    },
-    "right": {
-      "label": "Wine Bar",
-      "description": "Natural wine, charcuterie, a room that hums with quiet conversation",
-      "bgClass": "bg-rose-900",
-      "weights": [
-        { "dimension": "vibe", "value": 6 },
-        { "dimension": "cost", "value": 4 },
-        { "dimension": "density", "value": 5 }
+        { "dimension": "safety", "value": 7 }
       ]
     }
   },
   {
-    "id": "q7-pace",
+    "id": "q4-saturday",
     "type": "multi-choice-grid",
-    "prompt": "Choose your city pace.",
+    "prompt": "Today is Saturday morning. You are planning to ___ your weekend.",
     "options": [
       {
-        "id": "hustle",
-        "label": "Always On",
-        "icon": "⚡",
+        "id": "indoor-focus",
+        "label": "Read, game, or cook at home",
+        "icon": "📚",
         "weights": [
-          { "dimension": "density", "value": 9 },
-          { "dimension": "vibe", "value": 8 }
+          { "dimension": "career", "value": 8 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "tech", "value": 7 },
+          { "dimension": "balance", "value": 2 }
         ]
       },
       {
-        "id": "efficient",
-        "label": "Efficient",
-        "icon": "🎯",
+        "id": "outdoors",
+        "label": "Run, hike, or spend time in the park",
+        "icon": "🏃",
         "weights": [
-          { "dimension": "transit", "value": 9 },
-          { "dimension": "density", "value": 7 }
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "pulse", "value": 3 }
         ]
       },
       {
-        "id": "relaxed",
-        "label": "Relaxed",
+        "id": "culture-social",
+        "label": "Gallery, movie, friends, or shopping",
+        "icon": "🎨",
+        "weights": [
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "hustle", "value": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q5-straw",
+    "type": "multi-choice-grid",
+    "prompt": "Staff handed you the drink and told you — grab a straw you like.",
+    "options": [
+      {
+        "id": "no-straw",
+        "label": "No straw",
+        "icon": "✋",
+        "weights": [
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "openness", "value": 7 }
+        ]
+      },
+      {
+        "id": "paper-straw",
+        "label": "Paper straw",
+        "icon": "📄",
+        "weights": [
+          { "dimension": "safety", "value": 8 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "nature", "value": 7 }
+        ]
+      },
+      {
+        "id": "plastic-straw",
+        "label": "Plastic straw",
+        "icon": "🧋",
+        "weights": [
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "cost", "value": 3 },
+          { "dimension": "openness", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q6-early",
+    "type": "multi-choice-grid",
+    "prompt": "You are walking to meet a friend and realize you will be 5 minutes early. What is your move?",
+    "options": [
+      {
+        "id": "keep-pace",
+        "label": "Keep my pace — I'd rather arrive early",
+        "icon": "⏩",
+        "weights": [
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "balance", "value": 3 }
+        ]
+      },
+      {
+        "id": "scenic-route",
+        "label": "Slow down and take a scenic detour",
         "icon": "🌿",
         "weights": [
-          { "dimension": "density", "value": 4 },
-          { "dimension": "vibe", "value": 7 },
-          { "dimension": "cost", "value": 7 }
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "nature", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
         ]
       },
       {
-        "id": "spontaneous",
-        "label": "Spontaneous",
-        "icon": "🎲",
+        "id": "quick-errand",
+        "label": "Use the time to knock out a quick errand",
+        "icon": "✅",
         "weights": [
-          { "dimension": "vibe", "value": 9 },
-          { "dimension": "density", "value": 6 }
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "transit", "value": 7 },
+          { "dimension": "career", "value": 7 },
+          { "dimension": "balance", "value": 2 }
         ]
       }
     ]
   },
   {
-    "id": "q8-budget",
+    "id": "q8-personality",
+    "type": "multi-choice-grid",
+    "prompt": "My personality is based on:",
+    "options": [
+      {
+        "id": "finance-bro",
+        "label": "Patagonia vest, Windows laptop, Nasdaq, glass tower, Mercedes",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "career", "value": 8 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "cost", "value": 2 },
+          { "dimension": "safety", "value": 7 }
+        ]
+      },
+      {
+        "id": "tech-minimalist",
+        "label": "MacBook, On shoe, Tesla, smart home lighting",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "tech", "value": 8 },
+          { "dimension": "career", "value": 7 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "transit", "value": 3 }
+        ]
+      },
+      {
+        "id": "creative-cool",
+        "label": "Trader Joe's bag, vintage tattoo, DSM, Fujifilm, Toyota",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "nightlife", "value": 7 }
+        ]
+      },
+      {
+        "id": "outdoors-person",
+        "label": "Arc'teryx, gravel bike, National Park pass, Jeep, Subaru",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "nature", "value": 9 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "hustle", "value": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q9-flight-landed",
+    "type": "multi-choice-grid",
+    "prompt": "Your flight just landed in Maui, Hawaii. You just connected to the internet — the first thing you open is:",
+    "options": [
+      {
+        "id": "slack",
+        "label": "Slack / Teams",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "career", "value": 8 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "tech", "value": 7 },
+          { "dimension": "balance", "value": 2 }
+        ]
+      },
+      {
+        "id": "instagram",
+        "label": "Instagram",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "nightlife", "value": 7 },
+          { "dimension": "culture", "value": 7 },
+          { "dimension": "cost", "value": 3 }
+        ]
+      },
+      {
+        "id": "wechat",
+        "label": "WeChat",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "diversity", "value": 8 },
+          { "dimension": "tech", "value": 8 },
+          { "dimension": "culture", "value": 7 },
+          { "dimension": "hustle", "value": 7 }
+        ]
+      },
+      {
+        "id": "seatbelt",
+        "label": "Still on the seatbelt — I'm not in a rush",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "climate", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q10-subway-delay",
+    "type": "multi-choice-grid",
+    "prompt": "Your appointment is soon but the subway is delayed 7 minutes. You feel:",
+    "options": [
+      {
+        "id": "angry",
+        "label": "Angry — my whole day is ruined",
+        "icon": "😡",
+        "weights": [
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "balance", "value": 2 }
+        ]
+      },
+      {
+        "id": "sigh",
+        "label": "Sigh — I'll just wait",
+        "icon": "😮‍💨",
+        "weights": [
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "career", "value": 7 },
+          { "dimension": "transit", "value": 7 }
+        ]
+      },
+      {
+        "id": "zen",
+        "label": "It's okay — totally understandable",
+        "icon": "🧘",
+        "weights": [
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q11-friday-night",
+    "type": "multi-choice-grid",
+    "prompt": "It is Friday night at 11:30 PM. Where are you?",
+    "options": [
+      {
+        "id": "club",
+        "label": "Just getting started at the club or underground rave",
+        "icon": "🪩",
+        "weights": [
+          { "dimension": "nightlife", "value": 9 },
+          { "dimension": "pulse", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "balance", "value": 2 }
+        ]
+      },
+      {
+        "id": "wine-bar",
+        "label": "Deep conversation at a dimly lit wine bar",
+        "icon": "🍷",
+        "weights": [
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "nightlife", "value": 7 }
+        ]
+      },
+      {
+        "id": "in-bed",
+        "label": "In bed, halfway through a movie or a book",
+        "icon": "🛋️",
+        "weights": [
+          { "dimension": "balance", "value": 9 },
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "nightlife", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q12-ten-years",
+    "type": "multi-choice-grid",
+    "prompt": "If money is not a concern, I want to spend the next 10 years in:",
+    "options": [
+      {
+        "id": "paris",
+        "label": "Paris",
+        "icon": "🥐",
+        "weights": [
+          { "dimension": "aesthetics", "value": 9 },
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "balance", "value": 7 }
+        ]
+      },
+      {
+        "id": "tokyo",
+        "label": "Tokyo",
+        "icon": "🍣",
+        "weights": [
+          { "dimension": "transit", "value": 9 },
+          { "dimension": "safety", "value": 8 },
+          { "dimension": "hustle", "value": 7 }
+        ]
+      },
+      {
+        "id": "nyc",
+        "label": "New York City",
+        "icon": "🗽",
+        "weights": [
+          { "dimension": "hustle", "value": 9 },
+          { "dimension": "career", "value": 8 },
+          { "dimension": "diversity", "value": 7 }
+        ]
+      },
+      {
+        "id": "melbourne",
+        "label": "Melbourne",
+        "icon": "🦘",
+        "weights": [
+          { "dimension": "balance", "value": 9 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "culture", "value": 7 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q13-elevator-chat",
+    "type": "multi-choice-grid",
+    "prompt": "I was chatting with friends and we entered an elevator. What do I do?",
+    "options": [
+      {
+        "id": "stop-talking",
+        "label": "Stop the conversation immediately",
+        "icon": "🤐",
+        "weights": [
+          { "dimension": "safety", "value": 8 },
+          { "dimension": "openness", "value": 2 },
+          { "dimension": "hustle", "value": 7 }
+        ]
+      },
+      {
+        "id": "lower-volume",
+        "label": "Continue, but lower the volume",
+        "icon": "🔉",
+        "weights": [
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "safety", "value": 7 }
+        ]
+      },
+      {
+        "id": "same-volume",
+        "label": "Continue at the same volume",
+        "icon": "📢",
+        "weights": [
+          { "dimension": "openness", "value": 9 },
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "safety", "value": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q14-water-bottle",
     "type": "visual-comparison",
-    "prompt": "How do you feel about the cost of living?",
+    "prompt": "You realize you left your water bottle at the table in Starbucks.",
     "left": {
-      "label": "Pay for the Experience",
-      "description": "Money is just fuel — the city's energy is worth every cent",
-      "bgClass": "bg-violet-800",
+      "label": "Walk back",
+      "description": "I'm 90% sure it's still there — people are honest",
+      "bgClass": "bg-sky-700",
       "weights": [
-        { "dimension": "cost", "value": 2 },
-        { "dimension": "density", "value": 8 },
-        { "dimension": "vibe", "value": 8 }
+        { "dimension": "safety", "value": 9 },
+        { "dimension": "openness", "value": 8 },
+        { "dimension": "balance", "value": 7 }
       ]
     },
     "right": {
-      "label": "Value Matters",
-      "description": "Great city, great life — without burning your savings every month",
-      "bgClass": "bg-green-700",
+      "label": "Don't bother",
+      "description": "Someone definitely took it already — move on",
+      "bgClass": "bg-stone-700",
       "weights": [
-        { "dimension": "cost", "value": 8 },
-        { "dimension": "density", "value": 5 }
+        { "dimension": "safety", "value": 2 },
+        { "dimension": "hustle", "value": 7 },
+        { "dimension": "cost", "value": 3 }
       ]
     }
+  },
+  {
+    "id": "q15-tax-refund",
+    "type": "visual-comparison",
+    "prompt": "This year's tax refund is $20,000 more than expected.",
+    "left": {
+      "label": "Invest it",
+      "description": "30% HYSA · 40% VOO · 20% I bond · 10% fun money",
+      "bgClass": "bg-emerald-800",
+      "weights": [
+        { "dimension": "career", "value": 9 },
+        { "dimension": "safety", "value": 8 },
+        { "dimension": "hustle", "value": 8 },
+        { "dimension": "pulse", "value": 3 }
+      ]
+    },
+    "right": {
+      "label": "Book a trip to Paris",
+      "description": "WTF is HYSA — I'm going to Paris",
+      "bgClass": "bg-rose-700",
+      "weights": [
+        { "dimension": "culture", "value": 8 },
+        { "dimension": "aesthetics", "value": 8 },
+        { "dimension": "pulse", "value": 8 },
+        { "dimension": "balance", "value": 8 },
+        { "dimension": "career", "value": 2 }
+      ]
+    }
+  },
+  {
+    "id": "q16-ethiopian-food",
+    "type": "multi-choice-grid",
+    "prompt": "Your date tells you that the Ethiopian food here is great. You say:",
+    "options": [
+      {
+        "id": "what-is-it",
+        "label": "What is Ethiopian food…",
+        "icon": "🤔",
+        "weights": [
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "diversity", "value": 7 }
+        ]
+      },
+      {
+        "id": "lets-try",
+        "label": "Let's try it next time — I'm excited!",
+        "icon": "😋",
+        "weights": [
+          { "dimension": "diversity", "value": 9 },
+          { "dimension": "openness", "value": 9 },
+          { "dimension": "culture", "value": 7 }
+        ]
+      },
+      {
+        "id": "ill-pass",
+        "label": "I'll pass — Vietnamese / Italian / Chinese is better",
+        "icon": "😐",
+        "weights": [
+          { "dimension": "diversity", "value": 2 },
+          { "dimension": "openness", "value": 2 },
+          { "dimension": "culture", "value": 8 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q17-building",
+    "type": "multi-choice-grid",
+    "prompt": "I like this building.",
+    "options": [
+      {
+        "id": "brutalism",
+        "label": "Brutalism",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "openness", "value": 3 },
+          { "dimension": "hustle", "value": 7 }
+        ]
+      },
+      {
+        "id": "international-style",
+        "label": "International style office tower",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "career", "value": 8 },
+          { "dimension": "tech", "value": 8 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "cost", "value": 2 }
+        ]
+      },
+      {
+        "id": "copenhagen-style",
+        "label": "Typical building in Copenhagen",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "balance", "value": 9 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "transit", "value": 7 },
+          { "dimension": "wellness", "value": 7 }
+        ]
+      },
+      {
+        "id": "chinese-pavilion",
+        "label": "Traditional Chinese pavilion",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "culture", "value": 9 },
+          { "dimension": "nature", "value": 7 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "hustle", "value": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q18-graffiti",
+    "type": "multi-choice-grid",
+    "prompt": "Does this bother you?",
+    "options": [
+      {
+        "id": "its-art",
+        "label": "Nah, this is art",
+        "icon": "🎨",
+        "weights": [
+          { "dimension": "culture", "value": 9 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "safety", "value": 3 }
+        ]
+      },
+      {
+        "id": "i-dont-mind",
+        "label": "I do not mind",
+        "icon": "🤷",
+        "weights": [
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "culture", "value": 7 }
+        ]
+      },
+      {
+        "id": "paint-it-white",
+        "label": "Paint it white, please",
+        "icon": "🧹",
+        "weights": [
+          { "dimension": "safety", "value": 9 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "openness", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q19-vacation",
+    "type": "multi-choice-grid",
+    "prompt": "My next vacation will be in:",
+    "options": [
+      {
+        "id": "mountains",
+        "label": "Mountains, hiking, campfire",
+        "icon": "⛰️",
+        "weights": [
+          { "dimension": "nature", "value": 9 },
+          { "dimension": "climate", "value": 8 },
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "pulse", "value": 2 }
+        ]
+      },
+      {
+        "id": "beach",
+        "label": "Sun, beach, and a good book",
+        "icon": "🏖️",
+        "weights": [
+          { "dimension": "climate", "value": 9 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "wellness", "value": 7 }
+        ]
+      },
+      {
+        "id": "tokyo-city",
+        "label": "Tokyo tower, shopping, subway",
+        "icon": "🗼",
+        "weights": [
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "pulse", "value": 8 },
+          { "dimension": "tech", "value": 8 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "nature", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q20-sidewalk",
+    "type": "multi-choice-grid",
+    "prompt": "Pick your favorite sidewalk.",
+    "options": [
+      {
+        "id": "tokyo-sidewalk",
+        "label": "Tokyo — clean and tidy",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "safety", "value": 9 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "hustle", "value": 7 }
+        ]
+      },
+      {
+        "id": "swiss-stone",
+        "label": "Swiss — charming stone pavement",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "culture", "value": 9 },
+          { "dimension": "aesthetics", "value": 9 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "transit", "value": 3 }
+        ]
+      },
+      {
+        "id": "nyc-concrete",
+        "label": "NYC — usable, concrete, no-nonsense",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "hustle", "value": 9 },
+          { "dimension": "career", "value": 8 },
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "aesthetics", "value": 3 }
+        ]
+      },
+      {
+        "id": "suburb-grass",
+        "label": "US suburb — dirt path and grass verge",
+        "image": "/nyc.png",
+        "weights": [
+          { "dimension": "nature", "value": 9 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "cost", "value": 7 },
+          { "dimension": "transit", "value": 1 }
+        ]
+      }
+    ]
   }
 ]

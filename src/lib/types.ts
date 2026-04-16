@@ -1,5 +1,22 @@
 // ─── Scoring dimensions ───────────────────────────────────────────────────────
-export type Dimension = 'transit' | 'density' | 'vibe' | 'cost' | 'climate';
+export type Dimension =
+  | 'transit'
+  | 'safety'
+  | 'cost'
+  | 'climate'
+  | 'nightlife'
+  | 'nature'
+  | 'culture'
+  | 'diversity'
+  | 'tech'
+  | 'openness'
+  | 'balance'
+  | 'career'
+  | 'aesthetics'
+  | 'hustle'
+  | 'density'
+  | 'wellness'
+  | 'pulse';
 
 export type DimensionVector = Record<Dimension, number>; // values 0–10
 
@@ -7,7 +24,7 @@ export type DimensionVector = Record<Dimension, number>; // values 0–10
 export type QuestionType = 'visual-comparison' | 'multi-choice-grid' | 'mini-game';
 
 export interface AnswerWeight {
-  dimension: Dimension;
+  dimension: string; // loosely typed so legacy question weights don't break at runtime
   value: number; // 0–10
 }
 
@@ -27,7 +44,8 @@ export interface BaseQuestion {
 export interface ComparisonSide {
   label: string;
   description: string;
-  bgClass: string; // Tailwind bg class for placeholder
+  bgClass: string; // Tailwind bg class; used when no image is provided
+  image?: string;  // optional image path (overrides bgClass as background)
   weights: AnswerWeight[];
 }
 
@@ -41,13 +59,14 @@ export interface VisualComparisonQuestion extends BaseQuestion {
 export interface GridOption {
   id: string;
   label: string;
-  icon: string; // emoji
+  icon?: string;  // emoji (omit when using image)
+  image?: string; // image path (overrides icon slot)
   weights: AnswerWeight[];
 }
 
 export interface MultiChoiceGridQuestion extends BaseQuestion {
   type: 'multi-choice-grid';
-  options: [GridOption, GridOption, GridOption, GridOption]; // exactly 4
+  options: GridOption[]; // 3 or 4 options
 }
 
 // mini-game ────────────────────────────────────────────────────────────────────

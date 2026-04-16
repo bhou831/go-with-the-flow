@@ -1,16 +1,23 @@
 import type { RecordedAnswer, City, DimensionVector, Dimension } from './types';
 
-const DIMENSIONS: Dimension[] = ['transit', 'density', 'vibe', 'cost', 'climate'];
+const DIMENSIONS: Dimension[] = [
+  'transit', 'safety', 'cost', 'climate', 'nightlife',
+  'nature', 'culture', 'diversity', 'tech', 'openness',
+  'balance', 'career', 'aesthetics', 'hustle',
+  'density', 'wellness', 'pulse',
+];
 const NEUTRAL = 5;
 
 export function buildUserVector(answers: RecordedAnswer[]): DimensionVector {
-  const sum = Object.fromEntries(DIMENSIONS.map((d) => [d, 0])) as DimensionVector;
-  const count = Object.fromEntries(DIMENSIONS.map((d) => [d, 0])) as DimensionVector;
+  const sum: Record<string, number> = Object.fromEntries(DIMENSIONS.map((d) => [d, 0]));
+  const count: Record<string, number> = Object.fromEntries(DIMENSIONS.map((d) => [d, 0]));
 
   for (const answer of answers) {
     for (const w of answer.weights) {
-      sum[w.dimension] += w.value;
-      count[w.dimension] += 1;
+      if (w.dimension in sum) {
+        sum[w.dimension] += w.value;
+        count[w.dimension] += 1;
+      }
     }
   }
 

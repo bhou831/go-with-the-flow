@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import type { VisualComparisonQuestion, AnswerWeight } from '@/lib/types';
 
@@ -56,7 +57,7 @@ export default function VisualComparison({ question, onAnswer }: Props) {
               exit="exit"
               className={`relative flex flex-col items-center justify-center cursor-pointer
                           transition-all duration-300 overflow-hidden
-                          ${data.bgClass}
+                          ${data.image ? '' : data.bgClass}
                           ${isHovered ? 'flex-[1.2]' : 'flex-1'}`}
               onMouseEnter={() => setHovered(side)}
               onMouseLeave={() => setHovered(null)}
@@ -64,6 +65,16 @@ export default function VisualComparison({ question, onAnswer }: Props) {
               aria-label={`Choose ${data.label}`}
               whileTap={{ scale: 0.98 }}
             >
+              {/* Background image (when provided) */}
+              {data.image && (
+                <Image
+                  src={data.image}
+                  alt={data.label}
+                  fill
+                  className="object-cover"
+                />
+              )}
+
               {/* Overlay for readability */}
               <div className="absolute inset-0 bg-black/20" />
 

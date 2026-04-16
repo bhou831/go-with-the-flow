@@ -2,7 +2,8 @@ import { z } from 'zod';
 
 // ─── Shared primitives ────────────────────────────────────────────────────────
 
-const DimensionSchema = z.enum(['transit', 'density', 'vibe', 'cost', 'climate']);
+// Permissive string so existing question weights don't break while questions are being redesigned
+const DimensionSchema = z.string();
 
 const AnswerWeightSchema = z.object({
   dimension: DimensionSchema,
@@ -15,7 +16,7 @@ const ComparisonSideSchema = z.object({
   label: z.string().min(1),
   description: z.string().min(1),
   bgClass: z.string(),
-  imageSrc: z.string().optional(),
+  image: z.string().optional(),
   weights: z.array(AnswerWeightSchema).min(1),
 });
 
@@ -30,7 +31,8 @@ const VisualComparisonSchema = z.object({
 const GridOptionSchema = z.object({
   id: z.string().min(1),
   label: z.string().min(1),
-  icon: z.string(),
+  icon: z.string().optional(),
+  image: z.string().optional(),
   weights: z.array(AnswerWeightSchema).min(1),
 });
 
@@ -38,8 +40,7 @@ const MultiChoiceGridSchema = z.object({
   id: z.string().min(1),
   type: z.literal('multi-choice-grid'),
   prompt: z.string().min(1),
-  // Enforces exactly 4 options
-  options: z.tuple([GridOptionSchema, GridOptionSchema, GridOptionSchema, GridOptionSchema]),
+  options: z.array(GridOptionSchema).min(3).max(4),
 });
 
 const MiniGameActionSchema = z.object({
@@ -71,11 +72,23 @@ export const CitiesSchema = z.array(
     tagline: z.string().min(1),
     accentColor: z.string().regex(/^#[0-9A-Fa-f]{6}$/, 'Must be a 6-digit hex color e.g. #1a2b3c'),
     scores: z.object({
-      transit: z.number().min(0).max(10),
-      density: z.number().min(0).max(10),
-      vibe: z.number().min(0).max(10),
-      cost: z.number().min(0).max(10),
-      climate: z.number().min(0).max(10),
+      transit:    z.number().min(0).max(10),
+      safety:     z.number().min(0).max(10),
+      cost:       z.number().min(0).max(10),
+      climate:    z.number().min(0).max(10),
+      nightlife:  z.number().min(0).max(10),
+      nature:     z.number().min(0).max(10),
+      culture:    z.number().min(0).max(10),
+      diversity:  z.number().min(0).max(10),
+      tech:       z.number().min(0).max(10),
+      openness:   z.number().min(0).max(10),
+      balance:    z.number().min(0).max(10),
+      career:     z.number().min(0).max(10),
+      aesthetics: z.number().min(0).max(10),
+      hustle:     z.number().min(0).max(10),
+      density:    z.number().min(0).max(10),
+      wellness:   z.number().min(0).max(10),
+      pulse:      z.number().min(0).max(10),
     }),
   })
 );

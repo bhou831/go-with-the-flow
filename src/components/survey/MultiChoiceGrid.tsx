@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import type { MultiChoiceGridQuestion, AnswerWeight } from '@/lib/types';
+import type { MultiChoiceGridQuestion, AnswerWeight, GridOption } from '@/lib/types';
 
 interface Props {
   question: MultiChoiceGridQuestion;
@@ -20,7 +21,27 @@ const cardVariants = {
   exit: { opacity: 0, y: -16, transition: { duration: 0.2 } },
 };
 
+function OptionMedia({ option }: { option: GridOption }) {
+  if (option.image) {
+    return (
+      <div className="relative w-full h-24 rounded-lg overflow-hidden">
+        <Image src={option.image} alt={option.label} fill className="object-cover" />
+      </div>
+    );
+  }
+  if (option.icon) {
+    return (
+      <span className="text-4xl" role="img" aria-label={option.label}>
+        {option.icon}
+      </span>
+    );
+  }
+  return null;
+}
+
 export default function MultiChoiceGrid({ question, onAnswer }: Props) {
+  const isThree = question.options.length === 3;
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
       <div className="w-full max-w-md">
@@ -32,7 +53,7 @@ export default function MultiChoiceGrid({ question, onAnswer }: Props) {
         </h2>
 
         <motion.div
-          className="grid grid-cols-2 gap-4"
+          className={`grid gap-4 ${isThree ? 'grid-cols-3' : 'grid-cols-2'}`}
           variants={containerVariants}
           initial="initial"
           animate="animate"
@@ -45,16 +66,16 @@ export default function MultiChoiceGrid({ question, onAnswer }: Props) {
               whileTap={{ scale: 0.96 }}
               onClick={() => onAnswer(option.id, option.weights)}
               aria-label={`Choose ${option.label}`}
-              className="flex flex-col items-center justify-center gap-3 p-6
+              className="flex flex-col items-center justify-center gap-3 p-4
                          bg-white border-2 border-stone-100 rounded-2xl
                          cursor-pointer transition-colors duration-150
                          hover:border-stone-300 focus-visible:outline-none
                          focus-visible:ring-2 focus-visible:ring-stone-900 focus-visible:ring-offset-2"
             >
-              <span className="text-4xl" role="img" aria-label={option.label}>
-                {option.icon}
+              <OptionMedia option={option} />
+              <span className="font-semibold text-stone-800 text-sm text-center leading-snug">
+                {option.label}
               </span>
-              <span className="font-semibold text-stone-800 text-sm">{option.label}</span>
             </motion.button>
           ))}
         </motion.div>

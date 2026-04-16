@@ -4,11 +4,23 @@ import { motion } from 'framer-motion';
 import type { DimensionVector, Dimension } from '@/lib/types';
 
 const DIMENSION_LABELS: Record<Dimension, string> = {
-  transit: 'Transit',
-  density: 'Urban Density',
-  vibe: 'Social Vibe',
-  cost: 'Affordability',
-  climate: 'Warm Climate',
+  transit:    'Transit',
+  safety:     'Safety',
+  cost:       'Affordability',
+  climate:    'Climate',
+  nightlife:  'Nightlife',
+  nature:     'Nature Access',
+  culture:    'Culture & Arts',
+  diversity:  'Diversity',
+  tech:       'Tech Scene',
+  openness:   'Openness',
+  balance:    'Work-Life Balance',
+  career:     'Career',
+  aesthetics: 'Aesthetics',
+  hustle:     'Pace of Life',
+  density:    'Urban Density',
+  wellness:   'Wellness',
+  pulse:      'City Energy',
 };
 
 interface Props {

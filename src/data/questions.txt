@@ -1,0 +1,215 @@
+# Question 1: does this bother you?
+type: single choice - text
+animation to display: a moving escalator with some people standing on the left and some on the right
+options:
+1. yes, they should all be on the same side
+2. no, but I don't like the way they are standing
+3. no, what's the problem?
+actions:
+- if choosing option 1, hustle + 1, balance - 1, transit + 1
+- if choosing option 2, openness + 2, safety + 1 , hustle + 1
+- if choosing option 3, balance + 2, openness + 1, hustle -2
+
+# Question 2: You are at home and you can hear your neighbor practicing a musical instrument through the wall. Your reaction?
+type: single choice - text + emoji
+graohic to display: a girl playing violin
+options:
+1. I love it; it makes the city feel alive and artistic.
+2. It’s fine as long as they stop by 9:00 PM sharp.
+3. I shouldn't be able to hear my neighbors at all.
+actions:
+- if choosing option 1, culture +2, density +2, safety -1 (Tolerance for chaos).
+- if choosing option 2, safety +1, openness -1, hustle +1.
+- if choosing option 3, nature +2, cost +2 (Implies a need for space/luxury), density -2.
+
+# Question 3: which city layout speaks to you?
+type: single choice - graohic (left and right)
+options:
+1. Dense Grid
+2. Open Sprawl
+actions:
+- if choosing option 1, transit +2, hustle +2, culture +1, cost -2
+- if choosing option 2, nature +2, transit -2, hustle -1, cost +1, safety +1
+
+# Question 4: Today is Saturday morning, you are planning to ___ your weekend.
+type: single choice - emoji
+options:
+1. book, game, cooking
+2. run, hike, park
+3. gallery, movie, friend, shopping
+
+actions:
+- if choosing option 1, career +2, hustle +2, tech +1, balance -2.
+- if choosing option 2, nature +2, wellness +2, safety +1, pulse -1.
+- if choosing option 3, culture +2, aesthetics +2, openness +1, hustle -1.
+
+# Question 5: staff handed you the drink and told you, grab a straw you like
+type: single choice - text 
+options:
+1. no straw
+2. paper straw
+3. plastic straw
+actions:
+- if choosing option 1: nature +2, aesthetics +1, openness +1
+- if choosing option 2: safety +2, openness +2, nature +1
+- if choosing option 3: hustle +2, cost -1, openness -2
+
+# Question 6: You are walking to meet a friend and realize you are going to be 5 minutes early. What is your move?
+type: single choice - text + emoji
+options:
+1. Keep my current pace; I’d rather be early and ready for whatever is next.
+2. Slow down and take a "scenic route" through a park or a street I’ve never seen.
+3. Use the extra time to quickly check off a small task or errand nearby.
+actions:
+- if choosing option 1, hustle +1, safety +1, balance -1
+- if choosing option 2, balance +2, aesthetics +2, nature +1, hustle -2
+- if choosing option 3, hustle +2, transit +1, career +1, balance -2
+
+# Question 8: My personality is based on: 
+type: single choice - graphic (4 quadrants)
+options:
+1. patagonia vest, windows laptop, nasdaq, glass facade building, mercedes
+2. macbook, ons shoe, tesla, smart home lighting.
+3. Trader Joe's bag, vintage tattoo, Dover Street Market, fujifilm, toyota
+4. Arcteryx, gravel bike, National Park pass, jeep, subaru
+actions:
+- if choosing option 1: career +2, hustle +2, cost -2, safety +1
+- if choosing option 2: tech +2, career +1, safety +1, transit -1
+- if choosing option 3: culture +2, openness +2, aesthetics +1, nightlife +1
+- if choosing option 4: nature +3, balance +2, safety +1, hustle -1
+
+# Question 9: your flight just landed in Maui Hawaii, you just connected to the internet, the first thing you open is
+type: single choice - graphic (4 quadrants)
+1. Slack/Teams
+2. Instagram
+3. WeChat
+4. Seatbelt
+actions: 
+- if choosing option 1: career +2, hustle +2, tech +1, balance -2
+- if choosing option 2: aesthetics +2, nightlife +1, culture +1, cost -1
+- if choosing option 3: diversity +2, tech +2, culture +1, hustle +1
+- if choosing option 4: balance +2, nature +2, climate +1, hustle -2
+
+# Question 10: The appointment time is approaching but the subway is delayed for 7 minutes, you feel like
+type: single choice - emoji 
+1. 😡 (Angry, my day is ruined)
+2. 😮‍💨 (Sigh, wait)
+3. 🧘 (It is OK, understandable)
+
+actions:
+1. if choosing option 1: hustle +2, transit +2, balance -2
+2. if choosing option 2: hustle +1, career +1, transit +1
+3. if choosing option 3: balance +2, openness +1, hustle -2
+
+# Question 11: It is Friday night at 11:30 PM. Where are you?
+type: single choice - emoji (you decide)
+options:
+1. Just getting started at the club/underground rave.
+2. Having a deep conversation at a dimly lit wine bar.
+3. In bed, halfway through a movie or a book.
+
+actions:
+- if choosing option 1: nightlife +3, pulse +2, openness +1, balance -2
+- if choosing option 2: culture +2, aesthetics +2, nightlife +1
+- if choosing option 3: balance +3, wellness +2, safety +1, nightlife -2
+
+# Question 12: If money is not a concern, I want to spend the next 10 years in
+type: single choice - text
+options: 
+1. Paris
+2. Tokyo
+3. New York city
+4. Melbourn
+actions:
+- if choosing option 1: aesthetics +3, culture +2, balance +1
+- if choosing option 2: transit +3, safety +2, hustle +1
+- if choosing option 3: hustle +3, career +2, diversity +1
+- if choosing option 4: balance +3, openness +2, culture +1
+
+# Question 13: I was chatting with my friends and entered an elevator, what do I do
+type: single choice - text 
+options
+1. Stop the conversation immediatly
+2. Continue the conversation, lower volume
+3. Continue the conversation, same volume
+actions:
+- if choosing option 1: safety +2, openness -2, hustle +1
+- if choosing option 2: aesthetics +2, balance +1, safety +1
+- if choosing option 3: openness +3, culture +2, safety -1
+
+# Question 14: You realize you left your water bottle at the table in Starbucks, what do you do?
+type: single choice - text (left and right)
+options:
+- Walk back; I’m 90% sure it’s still there.
+- Don't bother; someone definitely took it already.
+actions:
+if choosing option 1: safety +3, openness +2, balance +1
+if choosing option 2: safety -2, hustle +1, cost -1
+
+# Question 15: This year's tax refund is $20,000 more than what you expected
+type: visual comparison (2 options)
+- 30% goes to HYSA, 40% goes to VOO, 20% goes to I bond, and 10% is my fun money
+- WTF is HYSA, I am booking a trip to Paris
+actions:
+if choosing option 1: career +3, safety +2, hustle +2, pulse -1
+if choosing option 2: culture +2, aesthetics +2, pulse +2, balance +2, career -2
+
+# Quesiton 16: Your date tells you that the ethiopian food is great! You say:
+type: single choice - text
+options:
+- What is ethiopian food...
+- Let us try it next time, I am excited
+- I will pass, Vietnamese/Italian/Chinese is better
+action
+if choosing option 1: openness +1, diversity +1
+if choosing option 2: diversity +3, openness +3, culture +1
+if choosing option 3: diversity -2, openness -2, culture +2
+
+# Question 17: I like this building
+type: single choice - graphic (4 quadrants)
+options: 
+1. a brutalism building
+2. an international style office building
+3. a typical building in copenhagen
+4. a traditional chinese pavillion
+actions:
+if choosing option 1: aesthetics +2, culture +2, openness -1, hustle +1
+if choosing option 2: career +2, tech +2, hustle +2, cost -2
+if choosing option 3: balance +3, aesthetics +2, transit +1, wellness +1
+if choosing option 4: culture +3, nature +1, safety +1, hustle -1
+
+# Question 18: Does this bother you? 
+type: single choice - text
+graphic to display: a mural or a graphitti
+options: 
+1. Nah, this is art
+2. I do not mind
+3. Paint it white please
+actions: 
+if choosing option 1: culture +3, openness +2, aesthetics +1, safety -1
+if choosing option 2: openness +1, culture +1
+if choosing option 3: safety +3, aesthetics +2, openness -2
+
+# Question 19: My next vacation will be in
+type single choice - emoji (you pick)
+options: 
+1: Mountain, hike, beef
+2: Sun, beach, book
+3: tokyo tower, shopping, subway
+actions
+if choosing option 1: nature +3, climate +2, wellness +2, pulse -2
+if choosing option 2: climate +3, balance +2, nature +2, wellness +1
+if choosing option 3: transit +2, pulse +2, tech +2, aesthetics +1, nature -2
+
+# Question 20: Pick your favoriate sidewalk
+type: single choice - graphic (4 quadrants)
+option:
+1. a tokyo side walk, clean tidy
+2. a charming swiss stone side walk
+3. a nyc side walk, usable, concret
+4. a us suburb sidewalk, dirt, grass
+action
+if choosing option 1: safety +3, aesthetics +2, transit +2, hustle +1
+if choosing option 2: culture +3, aesthetics +3, balance +2, transit -1
+if choosing option 3: hustle +3, career +2, transit +2, aesthetics -1
+if choosing option 4: nature +3, safety +1, cost +1, transit -3
