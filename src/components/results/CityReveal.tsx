@@ -8,9 +8,10 @@ import type { City, DimensionVector } from '@/lib/types';
 interface Props {
   city: City;
   userVector: DimensionVector;
+  topCities: City[];
 }
 
-export default function CityReveal({ city, userVector }: Props) {
+export default function CityReveal({ city, userVector, topCities }: Props) {
   const letters = city.name.split('');
 
   return (
@@ -74,12 +75,38 @@ export default function CityReveal({ city, userVector }: Props) {
         {/* Dimension bars */}
         <DimensionBars userVector={userVector} />
 
+        {/* Runner-up cities */}
+        {topCities.length > 1 && (
+          <motion.div
+            className="mt-8 w-full"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 3.0, duration: 0.5 }}
+          >
+            <p className="text-white/50 text-xs uppercase tracking-widest text-center mb-4">
+              Also a great fit
+            </p>
+            <div className="grid grid-cols-2 gap-3">
+              {topCities.slice(1).map((runnerUp, i) => (
+                <div
+                  key={runnerUp.id}
+                  className="rounded-2xl p-4 text-center bg-white/10"
+                >
+                  <p className="text-white/60 text-xs mb-1">#{i + 2}</p>
+                  <p className="text-white font-bold text-lg leading-tight">{runnerUp.name}</p>
+                  <p className="text-white/60 text-xs mt-1">{runnerUp.country}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
         {/* CTA */}
         <motion.div
           className="mt-12 flex flex-col items-center gap-4"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.8, duration: 0.4 }}
+          transition={{ delay: 3.4, duration: 0.4 }}
         >
           <Link
             href="/"

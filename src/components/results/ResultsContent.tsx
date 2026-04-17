@@ -39,7 +39,7 @@ export default function ResultsContent() {
     );
   }
 
-  const { city, userVector } = findMatchingCity(answers, cities);
+  const { city, userVector, topCities } = findMatchingCity(answers, cities);
 
-  return <CityReveal city={city} userVector={userVector} />;
+  return <CityReveal city={city} userVector={userVector} topCities={topCities} />;
 }

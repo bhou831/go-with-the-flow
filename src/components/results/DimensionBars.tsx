@@ -28,7 +28,11 @@ interface Props {
 }
 
 export default function DimensionBars({ userVector }: Props) {
-  const dimensions = Object.keys(DIMENSION_LABELS) as Dimension[];
+  // Only show dimensions the user actually expressed a preference on (value > 0).
+  // Untouched dimensions stay at 0 from maskedCosineSimilarity and add no signal.
+  const dimensions = (Object.keys(DIMENSION_LABELS) as Dimension[]).filter(
+    (d) => userVector[d] > 0
+  );
 
   return (
     <div className="w-full max-w-md mx-auto mt-8 space-y-4">

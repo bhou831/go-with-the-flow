@@ -34,7 +34,7 @@ export default function CityHero() {
           Where do<br />you belong?
         </h1>
         <p className="text-stone-300 text-sm mb-10 max-w-[22rem] leading-relaxed">
-          Eight questions. Six cities. One honest answer.
+          21 questions. 50 cities. One honest answer.
         </p>
         <Link
           href="/survey"

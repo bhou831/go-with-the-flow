@@ -1,3 +1,10 @@
+// ─── Header media (shown above choices in multi-choice-grid questions) ────────
+export type HeaderMediaAnimation = 'escalator' | 'violin';
+
+export type HeaderMedia =
+  | { type: 'animation'; animationId: HeaderMediaAnimation }
+  | { type: 'image'; src: string };
+
 // ─── Scoring dimensions ───────────────────────────────────────────────────────
 export type Dimension =
   | 'transit'
@@ -53,20 +60,25 @@ export interface VisualComparisonQuestion extends BaseQuestion {
   type: 'visual-comparison';
   left: ComparisonSide;
   right: ComparisonSide;
+  layout?: 'side-by-side' | 'stacked' | 'card-stack'; // card-stack = centered cards with image above text
 }
 
 // multi-choice-grid ────────────────────────────────────────────────────────────
 export interface GridOption {
   id: string;
   label: string;
+  description?: string; // optional sublabel shown in single-column layout
   icon?: string;  // emoji (omit when using image)
   image?: string; // image path (overrides icon slot)
+  imageAspect?: 'landscape' | 'square' | 'portrait'; // aspect ratio for image container
   weights: AnswerWeight[];
 }
 
 export interface MultiChoiceGridQuestion extends BaseQuestion {
   type: 'multi-choice-grid';
   options: GridOption[]; // 3 or 4 options
+  layout?: 'grid' | 'single-column' | 'card-column'; // card-column = 1×N full-width image-on-top cards
+  headerMedia?: HeaderMedia; // animation or image shown above prompt choices
 }
 
 // mini-game ────────────────────────────────────────────────────────────────────

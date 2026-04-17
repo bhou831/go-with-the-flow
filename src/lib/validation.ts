@@ -12,6 +12,11 @@ const AnswerWeightSchema = z.object({
 
 // ─── Question schemas ─────────────────────────────────────────────────────────
 
+const HeaderMediaSchema = z.union([
+  z.object({ type: z.literal('animation'), animationId: z.enum(['escalator', 'violin']) }),
+  z.object({ type: z.literal('image'), src: z.string().min(1) }),
+]);
+
 const ComparisonSideSchema = z.object({
   label: z.string().min(1),
   description: z.string().min(1),
@@ -26,13 +31,16 @@ const VisualComparisonSchema = z.object({
   prompt: z.string().min(1),
   left: ComparisonSideSchema,
   right: ComparisonSideSchema,
+  layout: z.enum(['side-by-side', 'stacked', 'card-stack']).optional(),
 });
 
 const GridOptionSchema = z.object({
   id: z.string().min(1),
   label: z.string().min(1),
+  description: z.string().optional(),
   icon: z.string().optional(),
   image: z.string().optional(),
+  imageAspect: z.enum(['landscape', 'square', 'portrait']).optional(),
   weights: z.array(AnswerWeightSchema).min(1),
 });
 
@@ -41,6 +49,8 @@ const MultiChoiceGridSchema = z.object({
   type: z.literal('multi-choice-grid'),
   prompt: z.string().min(1),
   options: z.array(GridOptionSchema).min(3).max(4),
+  layout: z.enum(['grid', 'single-column', 'card-column']).optional(),
+  headerMedia: HeaderMediaSchema.optional(),
 });
 
 const MiniGameActionSchema = z.object({
