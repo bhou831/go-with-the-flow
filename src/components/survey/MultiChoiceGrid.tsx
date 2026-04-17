@@ -208,7 +208,7 @@ export default function MultiChoiceGrid({ question, onAnswer }: Props) {
           </motion.div>
         ) : (
           <motion.div
-            className={`grid gap-4 ${isThree ? "grid-cols-3" : "grid-cols-2"}`}
+            className={`grid gap-4 ${isThree ? "grid-cols-2 sm:grid-cols-3" : "grid-cols-2"}`}
             variants={containerVariants}
             initial="initial"
             animate="animate"

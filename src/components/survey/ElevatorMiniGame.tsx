@@ -59,7 +59,7 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
         </p>
 
         {/* Elevator box */}
-        <div className="relative mx-auto w-64 h-72 bg-stone-200 rounded-xl overflow-hidden border-4 border-stone-300 mb-6">
+        <div className="relative mx-auto w-[min(256px,90vw)] h-72 bg-stone-200 rounded-xl overflow-hidden border-4 border-stone-300 mb-6">
           {/* Floor display */}
           <div className="absolute top-3 right-3 bg-stone-800 text-green-400 text-xs font-mono px-2 py-1 rounded">
             {String(floor).padStart(2, "0")}
@@ -115,7 +115,7 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
                 exit={{ opacity: 0 }}
               >
                 <motion.p
-                  className="text-white text-center text-sm font-semibold leading-relaxed"
+                  className="text-white text-center text-xs sm:text-sm font-semibold leading-relaxed max-w-[200px]"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.4 }}

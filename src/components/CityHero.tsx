@@ -26,10 +26,10 @@ export default function CityHero() {
 
       {/* ── Text content ── */}
       <div className="relative z-10 flex flex-col items-center text-center px-6">
-        <p className="text-[10px] font-semibold text-stone-400 uppercase tracking-[0.5em] mb-6">
+        <p className="text-xs font-semibold text-stone-400 uppercase tracking-[0.5em] mb-6">
           A city personality quiz
         </p>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-[1.05] mb-5">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05] mb-5">
           Where do
           <br />
           you belong?
@@ -40,7 +40,8 @@ export default function CityHero() {
         <Link
           href="/survey"
           onClick={() => triggerHaptic()}
-          className="inline-flex items-center gap-2.5 bg-white text-stone-900 px-7 py-3.5
+          className="inline-flex items-center justify-center gap-2.5 bg-white text-stone-900 px-7 py-3.5
+                     w-full sm:w-auto
                      rounded-full text-sm font-semibold tracking-wide
                      hover:bg-stone-100 active:scale-95 transition-all duration-150
                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white

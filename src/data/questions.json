@@ -14,18 +14,9 @@
         "label": "Yes, they should all be on the same side",
         "icon": "😤",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 7
-          },
-          {
-            "dimension": "balance",
-            "value": 3
-          },
-          {
-            "dimension": "transit",
-            "value": 7
-          }
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "balance", "value": 3 },
+          { "dimension": "transit", "value": 7 }
         ]
       },
       {
@@ -33,18 +24,9 @@
         "label": "No, but I don't like the way they are standing",
         "icon": "🤷",
         "weights": [
-          {
-            "dimension": "openness",
-            "value": 8
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          }
+          { "dimension": "hustle", "value": 6 },
+          { "dimension": "openness", "value": 3 },
+          { "dimension": "aesthetics", "value": 6 }
         ]
       },
       {
@@ -52,18 +34,9 @@
         "label": "No, what's the problem?",
         "icon": "😌",
         "weights": [
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 2
-          }
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
         ]
       }
     ]
@@ -83,18 +56,9 @@
         "label": "I love it — it makes the city feel alive",
         "icon": "🎵",
         "weights": [
-          {
-            "dimension": "culture",
-            "value": 8
-          },
-          {
-            "dimension": "density",
-            "value": 8
-          },
-          {
-            "dimension": "safety",
-            "value": 3
-          }
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "density", "value": 8 },
+          { "dimension": "safety", "value": 3 }
         ]
       },
       {
@@ -102,18 +66,9 @@
         "label": "Fine, as long as they stop by 9:00 PM sharp",
         "icon": "🕙",
         "weights": [
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "openness",
-            "value": 3
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          }
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "openness", "value": 3 },
+          { "dimension": "balance", "value": 6 }
         ]
       },
       {
@@ -121,18 +76,10 @@
         "label": "I shouldn't be able to hear my neighbors at all",
         "icon": "🏠",
         "weights": [
-          {
-            "dimension": "nature",
-            "value": 8
-          },
-          {
-            "dimension": "cost",
-            "value": 8
-          },
-          {
-            "dimension": "density",
-            "value": 2
-          }
+          { "dimension": "nature", "value": 6 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "wellness", "value": 7 },
+          { "dimension": "density", "value": 2 }
         ]
       }
     ]
@@ -148,22 +95,10 @@
       "bgClass": "bg-slate-800",
       "image": "/dense.png",
       "weights": [
-        {
-          "dimension": "transit",
-          "value": 8
-        },
-        {
-          "dimension": "hustle",
-          "value": 8
-        },
-        {
-          "dimension": "culture",
-          "value": 7
-        },
-        {
-          "dimension": "cost",
-          "value": 2
-        }
+        { "dimension": "transit", "value": 8 },
+        { "dimension": "hustle", "value": 8 },
+        { "dimension": "culture", "value": 7 },
+        { "dimension": "cost", "value": 2 }
       ]
     },
     "right": {
@@ -172,26 +107,11 @@
       "bgClass": "bg-amber-100",
       "image": "/sparse.png",
       "weights": [
-        {
-          "dimension": "nature",
-          "value": 8
-        },
-        {
-          "dimension": "transit",
-          "value": 2
-        },
-        {
-          "dimension": "hustle",
-          "value": 3
-        },
-        {
-          "dimension": "cost",
-          "value": 7
-        },
-        {
-          "dimension": "safety",
-          "value": 7
-        }
+        { "dimension": "nature", "value": 8 },
+        { "dimension": "transit", "value": 2 },
+        { "dimension": "hustle", "value": 3 },
+        { "dimension": "cost", "value": 7 },
+        { "dimension": "safety", "value": 7 }
       ]
     }
   },
@@ -206,22 +126,10 @@
         "label": "Read, game, or cook at home",
         "icon": "📚",
         "weights": [
-          {
-            "dimension": "career",
-            "value": 8
-          },
-          {
-            "dimension": "hustle",
-            "value": 8
-          },
-          {
-            "dimension": "tech",
-            "value": 7
-          },
-          {
-            "dimension": "balance",
-            "value": 2
-          }
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "wellness", "value": 6 },
+          { "dimension": "tech", "value": 6 },
+          { "dimension": "hustle", "value": 2 }
         ]
       },
       {
@@ -229,22 +137,10 @@
         "label": "Run, hike, or spend time in the park",
         "icon": "🏃",
         "weights": [
-          {
-            "dimension": "nature",
-            "value": 8
-          },
-          {
-            "dimension": "wellness",
-            "value": 8
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "pulse",
-            "value": 3
-          }
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "climate", "value": 7 },
+          { "dimension": "pulse", "value": 3 }
         ]
       },
       {
@@ -252,22 +148,10 @@
         "label": "Gallery, movie, friends, or shopping",
         "icon": "🎨",
         "weights": [
-          {
-            "dimension": "culture",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 3
-          }
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "hustle", "value": 3 }
         ]
       }
     ]
@@ -283,18 +167,9 @@
         "label": "No straw",
         "icon": "✋",
         "weights": [
-          {
-            "dimension": "nature",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 7
-          },
-          {
-            "dimension": "openness",
-            "value": 7
-          }
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "wellness", "value": 7 },
+          { "dimension": "openness", "value": 7 }
         ]
       },
       {
@@ -302,18 +177,9 @@
         "label": "Paper straw",
         "icon": "📄",
         "weights": [
-          {
-            "dimension": "safety",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 8
-          },
-          {
-            "dimension": "nature",
-            "value": 7
-          }
+          { "dimension": "wellness", "value": 7 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "nature", "value": 7 }
         ]
       },
       {
@@ -321,18 +187,50 @@
         "label": "Plastic straw",
         "icon": "🧋",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 8
-          },
-          {
-            "dimension": "cost",
-            "value": 3
-          },
-          {
-            "dimension": "openness",
-            "value": 2
-          }
+          { "dimension": "hustle", "value": 5 },
+          { "dimension": "cost", "value": 3 },
+          { "dimension": "openness", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q-coke",
+    "type": "multi-choice-grid",
+    "layout": "single-column",
+    "prompt": "I drink:",
+    "options": [
+      {
+        "id": "coke-zero",
+        "label": "Coke Zero",
+        "icon": "⚫",
+        "weights": [
+          { "dimension": "career", "value": 8 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "tech", "value": 7 },
+          { "dimension": "wellness", "value": 3 }
+        ]
+      },
+      {
+        "id": "diet-coke",
+        "label": "Diet Coke",
+        "icon": "🔴",
+        "weights": [
+          { "dimension": "pulse", "value": 8 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "culture", "value": 7 },
+          { "dimension": "career", "value": 7 }
+        ]
+      },
+      {
+        "id": "original-coke",
+        "label": "Original Coke",
+        "icon": "🥤",
+        "weights": [
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "culture", "value": 6 },
+          { "dimension": "wellness", "value": 2 }
         ]
       }
     ]
@@ -348,18 +246,9 @@
         "label": "Keep my pace — I'd rather arrive early",
         "icon": "⏩",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 7
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "balance",
-            "value": 3
-          }
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "career", "value": 6 },
+          { "dimension": "balance", "value": 3 }
         ]
       },
       {
@@ -367,22 +256,10 @@
         "label": "Slow down and take a scenic detour",
         "icon": "🌿",
         "weights": [
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "nature",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 2
-          }
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "nature", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
         ]
       },
       {
@@ -390,22 +267,60 @@
         "label": "Use the time to knock out a quick errand",
         "icon": "✅",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 8
-          },
-          {
-            "dimension": "transit",
-            "value": 7
-          },
-          {
-            "dimension": "career",
-            "value": 7
-          },
-          {
-            "dimension": "balance",
-            "value": 2
-          }
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "density", "value": 6 },
+          { "dimension": "career", "value": 7 },
+          { "dimension": "balance", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q-floor-plan",
+    "type": "multi-choice-grid",
+    "layout": "single-column",
+    "prompt": "Pick your apartment:",
+    "options": [
+      {
+        "id": "studio-downtown",
+        "label": "280 sqft studio — 10-min walk to everything, paper-thin walls",
+        "icon": "🏙️",
+        "weights": [
+          { "dimension": "density", "value": 10 },
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "cost", "value": 5 }
+        ]
+      },
+      {
+        "id": "midsize-transit",
+        "label": "700 sqft, 25 min from center, solid transit",
+        "icon": "🏢",
+        "weights": [
+          { "dimension": "density", "value": 6 },
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "cost", "value": 6 }
+        ]
+      },
+      {
+        "id": "warehouse",
+        "label": "Whole floor of a converted warehouse, 40 min out",
+        "icon": "🏭",
+        "weights": [
+          { "dimension": "aesthetics", "value": 9 },
+          { "dimension": "nature", "value": 6 },
+          { "dimension": "density", "value": 2 },
+          { "dimension": "cost", "value": 6 }
+        ]
+      },
+      {
+        "id": "house",
+        "label": "Single-family house, two-car garage, cul-de-sac",
+        "icon": "🏡",
+        "weights": [
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "density", "value": 1 },
+          { "dimension": "cost", "value": 7 },
+          { "dimension": "balance", "value": 8 }
         ]
       }
     ]
@@ -421,22 +336,10 @@
         "label": "stonk",
         "image": "/bank.png",
         "weights": [
-          {
-            "dimension": "career",
-            "value": 8
-          },
-          {
-            "dimension": "hustle",
-            "value": 8
-          },
-          {
-            "dimension": "cost",
-            "value": 2
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          }
+          { "dimension": "career", "value": 8 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "cost", "value": 2 },
+          { "dimension": "density", "value": 7 }
         ]
       },
       {
@@ -444,22 +347,10 @@
         "label": "tc🥜",
         "image": "/sv.png",
         "weights": [
-          {
-            "dimension": "tech",
-            "value": 8
-          },
-          {
-            "dimension": "career",
-            "value": 7
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "transit",
-            "value": 3
-          }
+          { "dimension": "tech", "value": 8 },
+          { "dimension": "career", "value": 7 },
+          { "dimension": "hustle", "value": 6 },
+          { "dimension": "transit", "value": 3 }
         ]
       },
       {
@@ -467,22 +358,10 @@
         "label": "transplant",
         "image": "/wv.png",
         "weights": [
-          {
-            "dimension": "culture",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 7
-          },
-          {
-            "dimension": "nightlife",
-            "value": 7
-          }
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "nightlife", "value": 7 }
         ]
       },
       {
@@ -490,22 +369,10 @@
         "label": "neiture",
         "image": "/parks.png",
         "weights": [
-          {
-            "dimension": "nature",
-            "value": 9
-          },
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 3
-          }
+          { "dimension": "nature", "value": 9 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "wellness", "value": 7 },
+          { "dimension": "hustle", "value": 3 }
         ]
       }
     ]
@@ -521,22 +388,10 @@
         "image": "/slack.png",
         "imageAspect": "square",
         "weights": [
-          {
-            "dimension": "career",
-            "value": 8
-          },
-          {
-            "dimension": "hustle",
-            "value": 8
-          },
-          {
-            "dimension": "tech",
-            "value": 7
-          },
-          {
-            "dimension": "balance",
-            "value": 2
-          }
+          { "dimension": "career", "value": 8 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "tech", "value": 7 },
+          { "dimension": "balance", "value": 2 }
         ]
       },
       {
@@ -545,22 +400,10 @@
         "image": "/ig.png",
         "imageAspect": "square",
         "weights": [
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "nightlife",
-            "value": 7
-          },
-          {
-            "dimension": "culture",
-            "value": 7
-          },
-          {
-            "dimension": "cost",
-            "value": 3
-          }
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "nightlife", "value": 7 },
+          { "dimension": "culture", "value": 7 },
+          { "dimension": "cost", "value": 3 }
         ]
       },
       {
@@ -569,22 +412,10 @@
         "image": "/wechat.png",
         "imageAspect": "square",
         "weights": [
-          {
-            "dimension": "diversity",
-            "value": 8
-          },
-          {
-            "dimension": "tech",
-            "value": 8
-          },
-          {
-            "dimension": "culture",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          }
+          { "dimension": "diversity", "value": 8 },
+          { "dimension": "tech", "value": 8 },
+          { "dimension": "culture", "value": 7 },
+          { "dimension": "safety", "value": 6 }
         ]
       },
       {
@@ -593,22 +424,58 @@
         "image": "/luggage.jpg",
         "imageAspect": "square",
         "weights": [
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "nature",
-            "value": 8
-          },
-          {
-            "dimension": "climate",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 2
-          }
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "climate", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q-plane-stranger",
+    "type": "multi-choice-grid",
+    "layout": "single-column",
+    "prompt": "On your flight, the person next to you is from a country you know almost nothing about. They start talking.",
+    "options": [
+      {
+        "id": "ask-everything",
+        "label": "Ask everything — where, what's it like, what do people eat",
+        "icon": "🌍",
+        "weights": [
+          { "dimension": "diversity", "value": 9 },
+          { "dimension": "openness", "value": 9 },
+          { "dimension": "culture", "value": 8 }
+        ]
+      },
+      {
+        "id": "friendly-short",
+        "label": "Keep it friendly, keep it short",
+        "icon": "🤝",
+        "weights": [
+          { "dimension": "openness", "value": 5 },
+          { "dimension": "safety", "value": 6 },
+          { "dimension": "balance", "value": 7 }
+        ]
+      },
+      {
+        "id": "headphones",
+        "label": "Smile, headphones in after two minutes",
+        "icon": "🎧",
+        "weights": [
+          { "dimension": "openness", "value": 2 },
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "tech", "value": 6 }
+        ]
+      },
+      {
+        "id": "talk-myself",
+        "label": "Mostly talk about myself",
+        "icon": "🗣️",
+        "weights": [
+          { "dimension": "career", "value": 7 },
+          { "dimension": "hustle", "value": 6 },
+          { "dimension": "openness", "value": 3 }
         ]
       }
     ]
@@ -624,18 +491,9 @@
         "label": "Angry — my whole day is ruined",
         "icon": "😡",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 8
-          },
-          {
-            "dimension": "transit",
-            "value": 8
-          },
-          {
-            "dimension": "balance",
-            "value": 2
-          }
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "balance", "value": 2 }
         ]
       },
       {
@@ -643,18 +501,9 @@
         "label": "Sigh — I'll just wait",
         "icon": "😮‍💨",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 7
-          },
-          {
-            "dimension": "career",
-            "value": 7
-          },
-          {
-            "dimension": "transit",
-            "value": 7
-          }
+          { "dimension": "hustle", "value": 6 },
+          { "dimension": "transit", "value": 7 },
+          { "dimension": "balance", "value": 5 }
         ]
       },
       {
@@ -662,18 +511,9 @@
         "label": "It's okay — totally understandable",
         "icon": "🧘",
         "weights": [
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 2
-          }
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "hustle", "value": 2 }
         ]
       }
     ]
@@ -689,22 +529,10 @@
         "label": "Just getting started at the club or underground rave",
         "icon": "🪩",
         "weights": [
-          {
-            "dimension": "nightlife",
-            "value": 9
-          },
-          {
-            "dimension": "pulse",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 7
-          },
-          {
-            "dimension": "balance",
-            "value": 2
-          }
+          { "dimension": "nightlife", "value": 9 },
+          { "dimension": "pulse", "value": 8 },
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "balance", "value": 2 }
         ]
       },
       {
@@ -712,18 +540,9 @@
         "label": "Deep conversation at a dimly lit wine bar",
         "icon": "🍷",
         "weights": [
-          {
-            "dimension": "culture",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "nightlife",
-            "value": 7
-          }
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "nightlife", "value": 7 }
         ]
       },
       {
@@ -731,106 +550,106 @@
         "label": "In bed, halfway through a movie or a book",
         "icon": "🛋️",
         "weights": [
-          {
-            "dimension": "balance",
-            "value": 9
-          },
-          {
-            "dimension": "wellness",
-            "value": 8
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "nightlife",
-            "value": 2
-          }
+          { "dimension": "balance", "value": 9 },
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "nightlife", "value": 2 }
         ]
       }
     ]
   },
   {
-    "id": "q12-ten-years",
+    "id": "q-diner",
     "type": "multi-choice-grid",
     "layout": "single-column",
-    "prompt": "If money is not a concern, I want to spend the next 10 years in:",
+    "prompt": "A 24-hour diner just opened 30 feet from your building.",
     "options": [
       {
-        "id": "paris",
-        "label": "Paris",
-        "icon": "🥐",
+        "id": "finally",
+        "label": "Finally. This is how cities should work.",
+        "icon": "🌃",
         "weights": [
-          {
-            "dimension": "aesthetics",
-            "value": 9
-          },
-          {
-            "dimension": "culture",
-            "value": 8
-          },
-          {
-            "dimension": "balance",
-            "value": 7
-          }
+          { "dimension": "pulse", "value": 9 },
+          { "dimension": "density", "value": 8 },
+          { "dimension": "nightlife", "value": 7 }
         ]
       },
       {
-        "id": "tokyo",
-        "label": "Tokyo",
-        "icon": "🍣",
+        "id": "convenient",
+        "label": "Convenient, I guess",
+        "icon": "🤷",
         "weights": [
-          {
-            "dimension": "transit",
-            "value": 9
-          },
-          {
-            "dimension": "safety",
-            "value": 8
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          }
+          { "dimension": "pulse", "value": 5 },
+          { "dimension": "density", "value": 5 }
         ]
       },
       {
-        "id": "nyc",
-        "label": "New York City",
-        "icon": "🗽",
+        "id": "midnight-excuse",
+        "label": "Now I have zero excuse not to eat well at midnight",
+        "icon": "🍳",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 9
-          },
-          {
-            "dimension": "career",
-            "value": 8
-          },
-          {
-            "dimension": "diversity",
-            "value": 7
-          }
+          { "dimension": "nightlife", "value": 8 },
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "balance", "value": 3 }
         ]
       },
       {
-        "id": "melbourne",
-        "label": "Melbourne",
-        "icon": "🦘",
+        "id": "noise-worry",
+        "label": "Worried about the noise after 2AM",
+        "icon": "😬",
         "weights": [
-          {
-            "dimension": "balance",
-            "value": 9
-          },
-          {
-            "dimension": "openness",
-            "value": 8
-          },
-          {
-            "dimension": "culture",
-            "value": 7
-          }
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "density", "value": 2 },
+          { "dimension": "pulse", "value": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q-last-night",
+    "type": "multi-choice-grid",
+    "layout": "single-column",
+    "prompt": "It's your last night in a city you've never visited. You:",
+    "options": [
+      {
+        "id": "hunt-locals",
+        "label": "Hunt down wherever locals actually eat — no tourist traps",
+        "icon": "🗺️",
+        "weights": [
+          { "dimension": "diversity", "value": 9 },
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "openness", "value": 8 }
+        ]
+      },
+      {
+        "id": "go-back",
+        "label": "Go back to the place that wowed you on night one",
+        "icon": "🔁",
+        "weights": [
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "safety", "value": 6 }
+        ]
+      },
+      {
+        "id": "rooftop-bar",
+        "label": "Find the rooftop bar with the best skyline view",
+        "icon": "🌆",
+        "weights": [
+          { "dimension": "pulse", "value": 8 },
+          { "dimension": "nightlife", "value": 7 },
+          { "dimension": "aesthetics", "value": 7 }
+        ]
+      },
+      {
+        "id": "sleep-early",
+        "label": "Get a full night's sleep — the flight is at 6 AM",
+        "icon": "😴",
+        "weights": [
+          { "dimension": "career", "value": 8 },
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "pulse", "value": 1 }
         ]
       }
     ]
@@ -846,18 +665,9 @@
         "label": "Stop the conversation immediately",
         "icon": "🤐",
         "weights": [
-          {
-            "dimension": "safety",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 2
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          }
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "openness", "value": 2 },
+          { "dimension": "balance", "value": 6 }
         ]
       },
       {
@@ -865,18 +675,9 @@
         "label": "Continue, but lower the volume",
         "icon": "🔉",
         "weights": [
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "balance",
-            "value": 7
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          }
+          { "dimension": "openness", "value": 5 },
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "safety", "value": 6 }
         ]
       },
       {
@@ -884,18 +685,9 @@
         "label": "Continue at the same volume",
         "icon": "📢",
         "weights": [
-          {
-            "dimension": "openness",
-            "value": 9
-          },
-          {
-            "dimension": "culture",
-            "value": 8
-          },
-          {
-            "dimension": "safety",
-            "value": 3
-          }
+          { "dimension": "openness", "value": 9 },
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "safety", "value": 3 }
         ]
       }
     ]
@@ -912,18 +704,9 @@
         "description": "I'm 90% sure it's still there — people are honest",
         "icon": "🚶",
         "weights": [
-          {
-            "dimension": "safety",
-            "value": 9
-          },
-          {
-            "dimension": "openness",
-            "value": 8
-          },
-          {
-            "dimension": "balance",
-            "value": 7
-          }
+          { "dimension": "safety", "value": 9 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "balance", "value": 7 }
         ]
       },
       {
@@ -932,18 +715,9 @@
         "description": "Someone definitely took it already — move on",
         "icon": "🤷",
         "weights": [
-          {
-            "dimension": "safety",
-            "value": 2
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          },
-          {
-            "dimension": "cost",
-            "value": 3
-          }
+          { "dimension": "safety", "value": 2 },
+          { "dimension": "hustle", "value": 7 },
+          { "dimension": "cost", "value": 3 }
         ]
       }
     ]
@@ -959,22 +733,10 @@
       "bgClass": "bg-emerald-800",
       "image": "/allocation.png",
       "weights": [
-        {
-          "dimension": "career",
-          "value": 9
-        },
-        {
-          "dimension": "safety",
-          "value": 8
-        },
-        {
-          "dimension": "hustle",
-          "value": 8
-        },
-        {
-          "dimension": "pulse",
-          "value": 3
-        }
+        { "dimension": "career", "value": 9 },
+        { "dimension": "safety", "value": 8 },
+        { "dimension": "hustle", "value": 8 },
+        { "dimension": "pulse", "value": 3 }
       ]
     },
     "right": {
@@ -983,26 +745,10 @@
       "bgClass": "bg-rose-700",
       "image": "/paris.png",
       "weights": [
-        {
-          "dimension": "culture",
-          "value": 8
-        },
-        {
-          "dimension": "aesthetics",
-          "value": 8
-        },
-        {
-          "dimension": "pulse",
-          "value": 8
-        },
-        {
-          "dimension": "balance",
-          "value": 8
-        },
-        {
-          "dimension": "career",
-          "value": 2
-        }
+        { "dimension": "culture", "value": 8 },
+        { "dimension": "aesthetics", "value": 8 },
+        { "dimension": "balance", "value": 8 },
+        { "dimension": "career", "value": 2 }
       ]
     }
   },
@@ -1017,14 +763,8 @@
         "label": "What is Ethiopian food…",
         "icon": "🤔",
         "weights": [
-          {
-            "dimension": "openness",
-            "value": 7
-          },
-          {
-            "dimension": "diversity",
-            "value": 7
-          }
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "diversity", "value": 7 }
         ]
       },
       {
@@ -1032,18 +772,9 @@
         "label": "Let's try it next time — I'm excited!",
         "icon": "😋",
         "weights": [
-          {
-            "dimension": "diversity",
-            "value": 9
-          },
-          {
-            "dimension": "openness",
-            "value": 9
-          },
-          {
-            "dimension": "culture",
-            "value": 7
-          }
+          { "dimension": "diversity", "value": 9 },
+          { "dimension": "openness", "value": 9 },
+          { "dimension": "culture", "value": 7 }
         ]
       },
       {
@@ -1051,18 +782,46 @@
         "label": "I'll pass — Vietnamese / Italian / Chinese is better",
         "icon": "😐",
         "weights": [
-          {
-            "dimension": "diversity",
-            "value": 2
-          },
-          {
-            "dimension": "openness",
-            "value": 2
-          },
-          {
-            "dimension": "culture",
-            "value": 8
-          }
+          { "dimension": "diversity", "value": 2 },
+          { "dimension": "openness", "value": 2 },
+          { "dimension": "culture", "value": 6 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q-spotify",
+    "type": "multi-choice-grid",
+    "layout": "single-column",
+    "prompt": "Spotify Wrapped drops. Your most-played artist is from a country you've never visited.",
+    "options": [
+      {
+        "id": "love-it",
+        "label": "Love it — I like finding music from everywhere",
+        "icon": "🎵",
+        "weights": [
+          { "dimension": "diversity", "value": 9 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "culture", "value": 7 }
+        ]
+      },
+      {
+        "id": "interesting",
+        "label": "Interesting. Didn't realize.",
+        "icon": "🤔",
+        "weights": [
+          { "dimension": "diversity", "value": 5 },
+          { "dimension": "openness", "value": 5 }
+        ]
+      },
+      {
+        "id": "same-songs",
+        "label": "I mostly listen to the same 20 songs on repeat",
+        "icon": "🔄",
+        "weights": [
+          { "dimension": "diversity", "value": 2 },
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "hustle", "value": 5 }
         ]
       }
     ]
@@ -1078,22 +837,9 @@
         "image": "/brutal.png",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "culture",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 3
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          }
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "culture", "value": 8 },
+          { "dimension": "density", "value": 7 }
         ]
       },
       {
@@ -1102,22 +848,10 @@
         "image": "/seagram.jpg",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "career",
-            "value": 8
-          },
-          {
-            "dimension": "tech",
-            "value": 8
-          },
-          {
-            "dimension": "hustle",
-            "value": 8
-          },
-          {
-            "dimension": "cost",
-            "value": 2
-          }
+          { "dimension": "career", "value": 8 },
+          { "dimension": "tech", "value": 6 },
+          { "dimension": "hustle", "value": 8 },
+          { "dimension": "cost", "value": 2 }
         ]
       },
       {
@@ -1126,22 +860,10 @@
         "image": "/denmark.png",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "balance",
-            "value": 9
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "transit",
-            "value": 7
-          },
-          {
-            "dimension": "wellness",
-            "value": 7
-          }
+          { "dimension": "balance", "value": 9 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "transit", "value": 7 },
+          { "dimension": "wellness", "value": 7 }
         ]
       },
       {
@@ -1150,22 +872,10 @@
         "image": "/kyoto.png",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "culture",
-            "value": 9
-          },
-          {
-            "dimension": "nature",
-            "value": 7
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "hustle",
-            "value": 3
-          }
+          { "dimension": "culture", "value": 9 },
+          { "dimension": "nature", "value": 7 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "hustle", "value": 3 }
         ]
       }
     ]
@@ -1185,22 +895,10 @@
         "label": "Nah, this is art",
         "icon": "🎨",
         "weights": [
-          {
-            "dimension": "culture",
-            "value": 9
-          },
-          {
-            "dimension": "openness",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 7
-          },
-          {
-            "dimension": "safety",
-            "value": 3
-          }
+          { "dimension": "culture", "value": 9 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "safety", "value": 3 }
         ]
       },
       {
@@ -1208,14 +906,8 @@
         "label": "I do not mind",
         "icon": "🤷",
         "weights": [
-          {
-            "dimension": "openness",
-            "value": 7
-          },
-          {
-            "dimension": "culture",
-            "value": 7
-          }
+          { "dimension": "openness", "value": 7 },
+          { "dimension": "culture", "value": 7 }
         ]
       },
       {
@@ -1223,18 +915,9 @@
         "label": "Paint it white, please",
         "icon": "🧹",
         "weights": [
-          {
-            "dimension": "safety",
-            "value": 9
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "openness",
-            "value": 2
-          }
+          { "dimension": "safety", "value": 9 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "openness", "value": 2 }
         ]
       }
     ]
@@ -1250,22 +933,10 @@
         "label": "Mountains, hiking, campfire",
         "icon": "⛰️",
         "weights": [
-          {
-            "dimension": "nature",
-            "value": 9
-          },
-          {
-            "dimension": "climate",
-            "value": 8
-          },
-          {
-            "dimension": "wellness",
-            "value": 8
-          },
-          {
-            "dimension": "pulse",
-            "value": 2
-          }
+          { "dimension": "nature", "value": 9 },
+          { "dimension": "climate", "value": 8 },
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "pulse", "value": 2 }
         ]
       },
       {
@@ -1273,22 +944,10 @@
         "label": "Sun, beach, and a good book",
         "icon": "🏖️",
         "weights": [
-          {
-            "dimension": "climate",
-            "value": 9
-          },
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "nature",
-            "value": 8
-          },
-          {
-            "dimension": "wellness",
-            "value": 7
-          }
+          { "dimension": "climate", "value": 9 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "wellness", "value": 7 }
         ]
       },
       {
@@ -1296,26 +955,11 @@
         "label": "Buildings, shopping, subway",
         "icon": "🛍️",
         "weights": [
-          {
-            "dimension": "transit",
-            "value": 8
-          },
-          {
-            "dimension": "pulse",
-            "value": 8
-          },
-          {
-            "dimension": "tech",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 7
-          },
-          {
-            "dimension": "nature",
-            "value": 2
-          }
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "pulse", "value": 8 },
+          { "dimension": "culture", "value": 7 },
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "nature", "value": 2 }
         ]
       }
     ]
@@ -1331,22 +975,10 @@
         "image": "/tokyo_sidewalk.png",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "safety",
-            "value": 9
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 8
-          },
-          {
-            "dimension": "transit",
-            "value": 8
-          },
-          {
-            "dimension": "hustle",
-            "value": 7
-          }
+          { "dimension": "safety", "value": 9 },
+          { "dimension": "aesthetics", "value": 8 },
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "hustle", "value": 5 }
         ]
       },
       {
@@ -1355,22 +987,10 @@
         "image": "/como_sidewalk.png",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "culture",
-            "value": 9
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 9
-          },
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "transit",
-            "value": 3
-          }
+          { "dimension": "culture", "value": 9 },
+          { "dimension": "aesthetics", "value": 9 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "transit", "value": 3 }
         ]
       },
       {
@@ -1379,22 +999,10 @@
         "image": "/nyc_sidewalk.jpg",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "hustle",
-            "value": 9
-          },
-          {
-            "dimension": "career",
-            "value": 8
-          },
-          {
-            "dimension": "transit",
-            "value": 8
-          },
-          {
-            "dimension": "aesthetics",
-            "value": 3
-          }
+          { "dimension": "hustle", "value": 9 },
+          { "dimension": "career", "value": 8 },
+          { "dimension": "transit", "value": 8 },
+          { "dimension": "aesthetics", "value": 3 }
         ]
       },
       {
@@ -1403,22 +1011,58 @@
         "image": "/strode_sidewalk.png",
         "imageAspect": "portrait",
         "weights": [
-          {
-            "dimension": "nature",
-            "value": 9
-          },
-          {
-            "dimension": "safety",
-            "value": 7
-          },
-          {
-            "dimension": "cost",
-            "value": 7
-          },
-          {
-            "dimension": "transit",
-            "value": 1
-          }
+          { "dimension": "nature", "value": 9 },
+          { "dimension": "safety", "value": 7 },
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "transit", "value": 1 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q-building-chat",
+    "type": "multi-choice-grid",
+    "layout": "single-column",
+    "prompt": "Your apartment building has a group chat. There are 94 unread messages from last night.",
+    "options": [
+      {
+        "id": "read-all",
+        "label": "Read them all — I want to know what's happening",
+        "icon": "📱",
+        "weights": [
+          { "dimension": "density", "value": 9 },
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "pulse", "value": 7 }
+        ]
+      },
+      {
+        "id": "archive",
+        "label": "Archive without reading. Every time.",
+        "icon": "🗄️",
+        "weights": [
+          { "dimension": "density", "value": 2 },
+          { "dimension": "balance", "value": 9 },
+          { "dimension": "hustle", "value": 3 }
+        ]
+      },
+      {
+        "id": "check-tagged",
+        "label": "Check only if my name is tagged",
+        "icon": "🔔",
+        "weights": [
+          { "dimension": "density", "value": 5 },
+          { "dimension": "career", "value": 6 },
+          { "dimension": "balance", "value": 7 }
+        ]
+      },
+      {
+        "id": "post-package",
+        "label": "Post 'has anyone seen my package?' and mute it",
+        "icon": "📦",
+        "weights": [
+          { "dimension": "density", "value": 7 },
+          { "dimension": "openness", "value": 6 },
+          { "dimension": "pulse", "value": 5 }
         ]
       }
     ]
@@ -1434,18 +1078,9 @@
         "label": "45-min subway — podcast in, people-watching out",
         "icon": "🚇",
         "weights": [
-          {
-            "dimension": "density",
-            "value": 9
-          },
-          {
-            "dimension": "transit",
-            "value": 9
-          },
-          {
-            "dimension": "pulse",
-            "value": 7
-          }
+          { "dimension": "density", "value": 9 },
+          { "dimension": "transit", "value": 9 },
+          { "dimension": "pulse", "value": 7 }
         ]
       },
       {
@@ -1453,22 +1088,10 @@
         "label": "20-min drive — my music, my space",
         "icon": "🚗",
         "weights": [
-          {
-            "dimension": "density",
-            "value": 3
-          },
-          {
-            "dimension": "transit",
-            "value": 2
-          },
-          {
-            "dimension": "hustle",
-            "value": 6
-          },
-          {
-            "dimension": "cost",
-            "value": 4
-          }
+          { "dimension": "density", "value": 3 },
+          { "dimension": "transit", "value": 2 },
+          { "dimension": "hustle", "value": 6 },
+          { "dimension": "balance", "value": 5 }
         ]
       },
       {
@@ -1476,18 +1099,9 @@
         "label": "10-min walk through the neighborhood",
         "icon": "🚶",
         "weights": [
-          {
-            "dimension": "density",
-            "value": 7
-          },
-          {
-            "dimension": "wellness",
-            "value": 9
-          },
-          {
-            "dimension": "balance",
-            "value": 8
-          }
+          { "dimension": "density", "value": 7 },
+          { "dimension": "wellness", "value": 9 },
+          { "dimension": "balance", "value": 8 }
         ]
       },
       {
@@ -1495,22 +1109,10 @@
         "label": "Bed → desk. Remote forever.",
         "icon": "🏠",
         "weights": [
-          {
-            "dimension": "tech",
-            "value": 8
-          },
-          {
-            "dimension": "balance",
-            "value": 8
-          },
-          {
-            "dimension": "density",
-            "value": 2
-          },
-          {
-            "dimension": "pulse",
-            "value": 2
-          }
+          { "dimension": "tech", "value": 8 },
+          { "dimension": "balance", "value": 8 },
+          { "dimension": "density", "value": 2 },
+          { "dimension": "pulse", "value": 2 }
         ]
       }
     ]
@@ -1526,18 +1128,9 @@
         "label": "Eternal spring — 72°F and sunny",
         "icon": "🌸",
         "weights": [
-          {
-            "dimension": "climate",
-            "value": 9
-          },
-          {
-            "dimension": "wellness",
-            "value": 8
-          },
-          {
-            "dimension": "nature",
-            "value": 7
-          }
+          { "dimension": "climate", "value": 9 },
+          { "dimension": "wellness", "value": 8 },
+          { "dimension": "nature", "value": 7 }
         ]
       },
       {
@@ -1545,18 +1138,9 @@
         "label": "Four distinct seasons — I need the variety",
         "icon": "🍂",
         "weights": [
-          {
-            "dimension": "climate",
-            "value": 5
-          },
-          {
-            "dimension": "nature",
-            "value": 8
-          },
-          {
-            "dimension": "culture",
-            "value": 7
-          }
+          { "dimension": "climate", "value": 5 },
+          { "dimension": "nature", "value": 8 },
+          { "dimension": "culture", "value": 7 }
         ]
       },
       {
@@ -1564,18 +1148,9 @@
         "label": "Hot, humid, lush — beach town energy",
         "icon": "🌴",
         "weights": [
-          {
-            "dimension": "climate",
-            "value": 8
-          },
-          {
-            "dimension": "pulse",
-            "value": 7
-          },
-          {
-            "dimension": "nightlife",
-            "value": 7
-          }
+          { "dimension": "climate", "value": 8 },
+          { "dimension": "pulse", "value": 7 },
+          { "dimension": "nightlife", "value": 7 }
         ]
       }
     ]

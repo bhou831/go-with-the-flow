@@ -117,11 +117,13 @@ export default function SurveyContainer({ questions }: SurveyContainerProps) {
             exit={{ opacity: 0, x: -8, transition: { duration: 0.15 } }}
             onClick={onBack}
             aria-label="Go back to previous question"
-            className="fixed top-6 left-5 z-50 flex items-center gap-1.5
+            className="fixed left-5 z-50 flex items-center gap-1.5
+                       p-2.5 -m-2.5
                        text-stone-400 hover:text-stone-100
                        text-xs font-medium tracking-wide
                        transition-colors duration-150
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-400"
+            style={{ top: "calc(1.5rem + env(safe-area-inset-top))" }}
           >
             <svg
               width="16"

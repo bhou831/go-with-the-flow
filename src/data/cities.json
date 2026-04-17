@@ -19,9 +19,9 @@
       "balance": 3,
       "career": 8,
       "aesthetics": 7,
-      "hustle": 7,
+      "hustle": 9,
       "density": 9,
-      "wellness": 4,
+      "wellness": 7,
       "pulse": 8
     }
   },
@@ -45,7 +45,7 @@
       "balance": 3,
       "career": 8,
       "aesthetics": 7,
-      "hustle": 7,
+      "hustle": 8,
       "density": 10,
       "wellness": 3,
       "pulse": 9
@@ -58,7 +58,7 @@
     "tagline": "East meets West, seven million floors up",
     "accentColor": "#6c1d8b",
     "scores": {
-      "transit": 9,
+      "transit": 10,
       "safety": 8,
       "cost": 2,
       "climate": 5,
@@ -72,8 +72,8 @@
       "career": 8,
       "aesthetics": 8,
       "hustle": 8,
-      "density": 9,
-      "wellness": 3,
+      "density": 10,
+      "wellness": 5,
       "pulse": 9
     }
   },
@@ -119,12 +119,12 @@
       "culture": 5,
       "diversity": 9,
       "tech": 7,
-      "openness": 4,
+      "openness": 3,
       "balance": 4,
       "career": 8,
       "aesthetics": 6,
       "hustle": 6,
-      "density": 7,
+      "density": 5,
       "wellness": 5,
       "pulse": 8
     }
@@ -138,7 +138,7 @@
     "scores": {
       "transit": 9,
       "safety": 9,
-      "cost": 5,
+      "cost": 4,
       "climate": 6,
       "nightlife": 7,
       "nature": 7,
@@ -162,7 +162,7 @@
     "tagline": "Efficient, tropical, impossibly clean",
     "accentColor": "#2d6a4f",
     "scores": {
-      "transit": 9,
+      "transit": 10,
       "safety": 10,
       "cost": 3,
       "climate": 4,
@@ -171,12 +171,12 @@
       "culture": 7,
       "diversity": 8,
       "tech": 9,
-      "openness": 6,
+      "openness": 5,
       "balance": 4,
       "career": 9,
       "aesthetics": 7,
       "hustle": 7,
-      "density": 8,
+      "density": 9,
       "wellness": 5,
       "pulse": 7
     }
@@ -190,7 +190,7 @@
     "scores": {
       "transit": 7,
       "safety": 8,
-      "cost": 4,
+      "cost": 3,
       "climate": 4,
       "nightlife": 7,
       "nature": 6,
@@ -276,12 +276,12 @@
       "diversity": 3,
       "tech": 7,
       "openness": 6,
-      "balance": 5,
+      "balance": 7,
       "career": 7,
       "aesthetics": 6,
-      "hustle": 5,
+      "hustle": 4,
       "density": 8,
-      "wellness": 6,
+      "wellness": 7,
       "pulse": 8
     }
   },
@@ -331,9 +331,9 @@
       "balance": 3,
       "career": 8,
       "aesthetics": 6,
-      "hustle": 7,
+      "hustle": 8,
       "density": 9,
-      "wellness": 3,
+      "wellness": 2,
       "pulse": 8
     }
   },
@@ -354,10 +354,10 @@
       "diversity": 10,
       "tech": 9,
       "openness": 9,
-      "balance": 4,
+      "balance": 3,
       "career": 10,
       "aesthetics": 7,
-      "hustle": 8,
+      "hustle": 9,
       "density": 10,
       "wellness": 5,
       "pulse": 10
@@ -398,7 +398,7 @@
     "scores": {
       "transit": 8,
       "safety": 7,
-      "cost": 6,
+      "cost": 5,
       "climate": 4,
       "nightlife": 10,
       "nature": 7,
@@ -424,7 +424,7 @@
     "scores": {
       "transit": 8,
       "safety": 8,
-      "cost": 5,
+      "cost": 4,
       "climate": 5,
       "nightlife": 6,
       "nature": 6,
@@ -617,7 +617,7 @@
       "balance": 5,
       "career": 9,
       "aesthetics": 7,
-      "hustle": 6,
+      "hustle": 7,
       "density": 8,
       "wellness": 6,
       "pulse": 9
@@ -691,7 +691,7 @@
       "culture": 8,
       "diversity": 5,
       "tech": 5,
-      "openness": 6,
+      "openness": 7,
       "balance": 7,
       "career": 6,
       "aesthetics": 6,
@@ -760,7 +760,7 @@
     "tagline": "Two thousand years of beauty, still open for business",
     "accentColor": "#8b3a1a",
     "scores": {
-      "transit": 6,
+      "transit": 5,
       "safety": 7,
       "cost": 6,
       "climate": 8,
@@ -787,7 +787,7 @@
     "accentColor": "#cc4700",
     "scores": {
       "transit": 5,
-      "safety": 5,
+      "safety": 4,
       "cost": 7,
       "climate": 8,
       "nightlife": 6,
@@ -814,14 +814,14 @@
     "scores": {
       "transit": 7,
       "safety": 6,
-      "cost": 7,
+      "cost": 6,
       "climate": 7,
       "nightlife": 8,
       "nature": 5,
       "culture": 10,
       "diversity": 6,
       "tech": 5,
-      "openness": 5,
+      "openness": 4,
       "balance": 6,
       "career": 6,
       "aesthetics": 9,
@@ -847,11 +847,11 @@
       "culture": 8,
       "diversity": 4,
       "tech": 9,
-      "openness": 8,
-      "balance": 5,
+      "openness": 9,
+      "balance": 4,
       "career": 8,
       "aesthetics": 6,
-      "hustle": 5,
+      "hustle": 7,
       "density": 8,
       "wellness": 6,
       "pulse": 7
@@ -929,7 +929,7 @@
       "balance": 5,
       "career": 10,
       "aesthetics": 8,
-      "hustle": 6,
+      "hustle": 7,
       "density": 7,
       "wellness": 7,
       "pulse": 8
@@ -971,7 +971,7 @@
       "transit": 4,
       "safety": 5,
       "cost": 3,
-      "climate": 6,
+      "climate": 5,
       "nightlife": 9,
       "nature": 6,
       "culture": 7,
@@ -1074,7 +1074,7 @@
     "scores": {
       "transit": 3,
       "safety": 7,
-      "cost": 5,
+      "cost": 4,
       "climate": 5,
       "nightlife": 8,
       "nature": 6,
@@ -1086,7 +1086,7 @@
       "career": 8,
       "aesthetics": 5,
       "hustle": 5,
-      "density": 4,
+      "density": 3,
       "wellness": 7,
       "pulse": 7
     }
@@ -1178,7 +1178,7 @@
     "scores": {
       "transit": 8,
       "safety": 7,
-      "cost": 4,
+      "cost": 3,
       "climate": 5,
       "nightlife": 5,
       "nature": 4,
@@ -1211,7 +1211,7 @@
       "culture": 9,
       "diversity": 3,
       "tech": 9,
-      "openness": 6,
+      "openness": 5,
       "balance": 2,
       "career": 8,
       "aesthetics": 6,
@@ -1256,7 +1256,7 @@
     "scores": {
       "transit": 8,
       "safety": 6,
-      "cost": 6,
+      "cost": 5,
       "climate": 9,
       "nightlife": 9,
       "nature": 6,
@@ -1282,7 +1282,7 @@
     "scores": {
       "transit": 8,
       "safety": 9,
-      "cost": 3,
+      "cost": 2,
       "climate": 4,
       "nightlife": 7,
       "nature": 7,
@@ -1308,7 +1308,7 @@
     "scores": {
       "transit": 8,
       "safety": 9,
-      "cost": 3,
+      "cost": 2,
       "climate": 2,
       "nightlife": 5,
       "nature": 9,
@@ -1334,7 +1334,7 @@
     "scores": {
       "transit": 4,
       "safety": 10,
-      "cost": 2,
+      "cost": 1,
       "climate": 1,
       "nightlife": 7,
       "nature": 10,
@@ -1360,7 +1360,7 @@
     "scores": {
       "transit": 8,
       "safety": 8,
-      "cost": 3,
+      "cost": 2,
       "climate": 3,
       "nightlife": 7,
       "nature": 8,
@@ -1419,7 +1419,7 @@
       "culture": 7,
       "diversity": 8,
       "tech": 6,
-      "openness": 5,
+      "openness": 3,
       "balance": 6,
       "career": 7,
       "aesthetics": 7,
@@ -1438,7 +1438,7 @@
     "scores": {
       "transit": 8,
       "safety": 8,
-      "cost": 4,
+      "cost": 3,
       "climate": 5,
       "nightlife": 8,
       "nature": 6,
