@@ -1293,8 +1293,8 @@
       },
       {
         "id": "tokyo-city",
-        "label": "Tokyo tower, shopping, subway",
-        "icon": "🗼",
+        "label": "Buildings, shopping, subway",
+        "icon": "🛍️",
         "weights": [
           {
             "dimension": "transit",
