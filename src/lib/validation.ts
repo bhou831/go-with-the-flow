@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 // ─── Shared primitives ────────────────────────────────────────────────────────
 
@@ -13,8 +13,11 @@ const AnswerWeightSchema = z.object({
 // ─── Question schemas ─────────────────────────────────────────────────────────
 
 const HeaderMediaSchema = z.union([
-  z.object({ type: z.literal('animation'), animationId: z.enum(['escalator', 'violin']) }),
-  z.object({ type: z.literal('image'), src: z.string().min(1) }),
+  z.object({
+    type: z.literal("animation"),
+    animationId: z.enum(["escalator", "violin"]),
+  }),
+  z.object({ type: z.literal("image"), src: z.string().min(1) }),
 ]);
 
 const ComparisonSideSchema = z.object({
@@ -27,11 +30,11 @@ const ComparisonSideSchema = z.object({
 
 const VisualComparisonSchema = z.object({
   id: z.string().min(1),
-  type: z.literal('visual-comparison'),
+  type: z.literal("visual-comparison"),
   prompt: z.string().min(1),
   left: ComparisonSideSchema,
   right: ComparisonSideSchema,
-  layout: z.enum(['side-by-side', 'stacked', 'card-stack']).optional(),
+  layout: z.enum(["side-by-side", "stacked", "card-stack"]).optional(),
 });
 
 const GridOptionSchema = z.object({
@@ -40,16 +43,16 @@ const GridOptionSchema = z.object({
   description: z.string().optional(),
   icon: z.string().optional(),
   image: z.string().optional(),
-  imageAspect: z.enum(['landscape', 'square', 'portrait']).optional(),
+  imageAspect: z.enum(["landscape", "square", "portrait"]).optional(),
   weights: z.array(AnswerWeightSchema).min(1),
 });
 
 const MultiChoiceGridSchema = z.object({
   id: z.string().min(1),
-  type: z.literal('multi-choice-grid'),
+  type: z.literal("multi-choice-grid"),
   prompt: z.string().min(1),
   options: z.array(GridOptionSchema).min(2).max(4),
-  layout: z.enum(['grid', 'single-column', 'card-column']).optional(),
+  layout: z.enum(["grid", "single-column", "card-column"]).optional(),
   headerMedia: HeaderMediaSchema.optional(),
 });
 
@@ -62,14 +65,18 @@ const MiniGameActionSchema = z.object({
 
 const MiniGameSchema = z.object({
   id: z.string().min(1),
-  type: z.literal('mini-game'),
+  type: z.literal("mini-game"),
   prompt: z.string().min(1),
   sceneDescription: z.string().min(1),
   actions: z.array(MiniGameActionSchema).min(2),
 });
 
 export const QuestionsSchema = z.array(
-  z.discriminatedUnion('type', [VisualComparisonSchema, MultiChoiceGridSchema, MiniGameSchema])
+  z.discriminatedUnion("type", [
+    VisualComparisonSchema,
+    MultiChoiceGridSchema,
+    MiniGameSchema,
+  ]),
 );
 
 // ─── City schema ──────────────────────────────────────────────────────────────
@@ -80,27 +87,29 @@ export const CitiesSchema = z.array(
     name: z.string().min(1),
     country: z.string().min(1),
     tagline: z.string().min(1),
-    accentColor: z.string().regex(/^#[0-9A-Fa-f]{6}$/, 'Must be a 6-digit hex color e.g. #1a2b3c'),
+    accentColor: z
+      .string()
+      .regex(/^#[0-9A-Fa-f]{6}$/, "Must be a 6-digit hex color e.g. #1a2b3c"),
     scores: z.object({
-      transit:    z.number().min(0).max(10),
-      safety:     z.number().min(0).max(10),
-      cost:       z.number().min(0).max(10),
-      climate:    z.number().min(0).max(10),
-      nightlife:  z.number().min(0).max(10),
-      nature:     z.number().min(0).max(10),
-      culture:    z.number().min(0).max(10),
-      diversity:  z.number().min(0).max(10),
-      tech:       z.number().min(0).max(10),
-      openness:   z.number().min(0).max(10),
-      balance:    z.number().min(0).max(10),
-      career:     z.number().min(0).max(10),
+      transit: z.number().min(0).max(10),
+      safety: z.number().min(0).max(10),
+      cost: z.number().min(0).max(10),
+      climate: z.number().min(0).max(10),
+      nightlife: z.number().min(0).max(10),
+      nature: z.number().min(0).max(10),
+      culture: z.number().min(0).max(10),
+      diversity: z.number().min(0).max(10),
+      tech: z.number().min(0).max(10),
+      openness: z.number().min(0).max(10),
+      balance: z.number().min(0).max(10),
+      career: z.number().min(0).max(10),
       aesthetics: z.number().min(0).max(10),
-      hustle:     z.number().min(0).max(10),
-      density:    z.number().min(0).max(10),
-      wellness:   z.number().min(0).max(10),
-      pulse:      z.number().min(0).max(10),
+      hustle: z.number().min(0).max(10),
+      density: z.number().min(0).max(10),
+      wellness: z.number().min(0).max(10),
+      pulse: z.number().min(0).max(10),
     }),
-  })
+  }),
 );
 
 // ─── Answer schema (for URL decode validation) ────────────────────────────────

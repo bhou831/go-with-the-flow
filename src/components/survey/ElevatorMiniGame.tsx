@@ -1,10 +1,14 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import type { ElevatorMiniGameQuestion, AnswerWeight, MiniGameAction } from '@/lib/types';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import type {
+  ElevatorMiniGameQuestion,
+  AnswerWeight,
+  MiniGameAction,
+} from "@/lib/types";
 
-type Phase = 'entering' | 'idle' | 'chosen';
+type Phase = "entering" | "idle" | "chosen";
 
 interface Props {
   question: ElevatorMiniGameQuestion;
@@ -12,13 +16,13 @@ interface Props {
 }
 
 export default function ElevatorMiniGame({ question, onAnswer }: Props) {
-  const [phase, setPhase] = useState<Phase>('entering');
+  const [phase, setPhase] = useState<Phase>("entering");
   const [chosen, setChosen] = useState<MiniGameAction | null>(null);
   const [floor, setFloor] = useState(1);
 
   // Transition from entering → idle after character animation
   useEffect(() => {
-    const t = setTimeout(() => setPhase('idle'), 900);
+    const t = setTimeout(() => setPhase("idle"), 900);
     return () => clearTimeout(t);
   }, []);
 
@@ -30,7 +34,7 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
 
   // After reveal text, advance survey
   useEffect(() => {
-    if (phase === 'chosen' && chosen) {
+    if (phase === "chosen" && chosen) {
       const t = setTimeout(() => onAnswer(chosen.id, chosen.weights), 1600);
       return () => clearTimeout(t);
     }
@@ -38,7 +42,7 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
 
   const handleAction = (action: MiniGameAction) => {
     setChosen(action);
-    setPhase('chosen');
+    setPhase("chosen");
   };
 
   return (
@@ -50,13 +54,15 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
         <h2 className="text-xl font-bold text-stone-900 text-center mb-2">
           {question.prompt}
         </h2>
-        <p className="text-stone-500 text-sm text-center mb-8">{question.sceneDescription}</p>
+        <p className="text-stone-500 text-sm text-center mb-8">
+          {question.sceneDescription}
+        </p>
 
         {/* Elevator box */}
         <div className="relative mx-auto w-64 h-72 bg-stone-200 rounded-xl overflow-hidden border-4 border-stone-300 mb-6">
           {/* Floor display */}
           <div className="absolute top-3 right-3 bg-stone-800 text-green-400 text-xs font-mono px-2 py-1 rounded">
-            {String(floor).padStart(2, '0')}
+            {String(floor).padStart(2, "0")}
           </div>
 
           {/* Ceiling light strip */}
@@ -86,7 +92,12 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
             className="absolute bottom-4 right-8 flex flex-col items-center gap-0.5"
             initial={{ x: 80, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ type: 'spring', stiffness: 280, damping: 22, delay: 0.1 }}
+            transition={{
+              type: "spring",
+              stiffness: 280,
+              damping: 22,
+              delay: 0.1,
+            }}
           >
             {/* Head */}
             <div className="w-6 h-6 rounded-full bg-amber-400 border-2 border-amber-500" />
@@ -96,7 +107,7 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
 
           {/* Chosen action overlay */}
           <AnimatePresence>
-            {phase === 'chosen' && chosen && (
+            {phase === "chosen" && chosen && (
               <motion.div
                 className="absolute inset-0 flex items-center justify-center bg-black/40 px-4"
                 initial={{ opacity: 0 }}
@@ -118,7 +129,7 @@ export default function ElevatorMiniGame({ question, onAnswer }: Props) {
 
         {/* Action buttons */}
         <AnimatePresence>
-          {phase === 'idle' && (
+          {phase === "idle" && (
             <motion.div
               className="flex flex-col gap-3"
               initial={{ opacity: 0, y: 12 }}

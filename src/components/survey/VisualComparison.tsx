@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import type { VisualComparisonQuestion, AnswerWeight } from '@/lib/types';
+import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import type { VisualComparisonQuestion, AnswerWeight } from "@/lib/types";
+import { triggerHaptic } from "@/lib/haptic";
 
 interface Props {
   question: VisualComparisonQuestion;
   onAnswer: (selectedId: string, weights: AnswerWeight[]) => void;
 }
 
-const panelVariants = (side: 'left' | 'right', stacked: boolean) => ({
+const panelVariants = (side: "left" | "right", stacked: boolean) => ({
   initial: stacked
-    ? { opacity: 0, y: side === 'left' ? -40 : 40 }
-    : { opacity: 0, x: side === 'left' ? -60 : 60 },
+    ? { opacity: 0, y: side === "left" ? -40 : 40 }
+    : { opacity: 0, x: side === "left" ? -60 : 60 },
   animate: {
     opacity: 1,
     x: 0,
@@ -23,7 +24,7 @@ const panelVariants = (side: 'left' | 'right', stacked: boolean) => ({
   exit: {
     opacity: 0,
     scale: 0.96,
-    transition: { duration: 0.25, ease: 'easeIn' as const },
+    transition: { duration: 0.25, ease: "easeIn" as const },
   },
 });
 
@@ -32,22 +33,27 @@ const cardVariants = (index: number) => ({
   animate: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const, delay: index * 0.12 },
+    transition: {
+      duration: 0.4,
+      ease: [0.22, 1, 0.36, 1] as const,
+      delay: index * 0.12,
+    },
   },
   exit: {
     opacity: 0,
     scale: 0.96,
-    transition: { duration: 0.25, ease: 'easeIn' as const },
+    transition: { duration: 0.25, ease: "easeIn" as const },
   },
 });
 
 export default function VisualComparison({ question, onAnswer }: Props) {
-  const [hovered, setHovered] = useState<'left' | 'right' | null>(null);
-  const isStacked = question.layout === 'stacked';
-  const isCardStack = question.layout === 'card-stack';
+  const [hovered, setHovered] = useState<"left" | "right" | null>(null);
+  const isStacked = question.layout === "stacked";
+  const isCardStack = question.layout === "card-stack";
 
-  const handleClick = (side: 'left' | 'right') => {
-    const chosen = side === 'left' ? question.left : question.right;
+  const handleClick = (side: "left" | "right") => {
+    triggerHaptic();
+    const chosen = side === "left" ? question.left : question.right;
     onAnswer(side, chosen.weights);
   };
 
@@ -64,8 +70,8 @@ export default function VisualComparison({ question, onAnswer }: Props) {
           </h2>
 
           <div className="flex flex-col gap-4">
-            {(['left', 'right'] as const).map((side, index) => {
-              const data = side === 'left' ? question.left : question.right;
+            {(["left", "right"] as const).map((side, index) => {
+              const data = side === "left" ? question.left : question.right;
               return (
                 <motion.button
                   key={side}
@@ -73,7 +79,10 @@ export default function VisualComparison({ question, onAnswer }: Props) {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  whileHover={{ scale: 1.01, boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
+                  whileHover={{
+                    scale: 1.01,
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                  }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleClick(side)}
                   aria-label={`Choose ${data.label}`}
@@ -99,8 +108,12 @@ export default function VisualComparison({ question, onAnswer }: Props) {
 
                   {/* Text section */}
                   <div className="px-5 py-4 bg-white">
-                    <h3 className="font-bold text-stone-900 text-lg mb-1">{data.label}</h3>
-                    <p className="text-stone-500 text-sm leading-relaxed">{data.description}</p>
+                    <h3 className="font-bold text-stone-900 text-lg mb-1">
+                      {data.label}
+                    </h3>
+                    <p className="text-stone-500 text-sm leading-relaxed">
+                      {data.description}
+                    </p>
                   </div>
                 </motion.button>
               );
@@ -123,9 +136,9 @@ export default function VisualComparison({ question, onAnswer }: Props) {
       </div>
 
       {/* Panels */}
-      <div className={`flex flex-1 ${isStacked ? 'flex-col' : 'flex-row'}`}>
-        {(['left', 'right'] as const).map((side) => {
-          const data = side === 'left' ? question.left : question.right;
+      <div className={`flex flex-1 ${isStacked ? "flex-col" : "flex-row"}`}>
+        {(["left", "right"] as const).map((side) => {
+          const data = side === "left" ? question.left : question.right;
           const isActive = hovered === side;
 
           return (
@@ -138,10 +151,12 @@ export default function VisualComparison({ question, onAnswer }: Props) {
               className={`
                 relative flex flex-col items-center justify-center cursor-pointer
                 overflow-hidden transition-all duration-300
-                ${data.image ? '' : data.bgClass}
-                ${isStacked
-                  ? `flex-1 min-h-[34vh] ${isActive ? 'flex-[1.15]' : ''}`
-                  : `flex-1 ${isActive ? 'flex-[1.2]' : ''}`}
+                ${data.image ? "" : data.bgClass}
+                ${
+                  isStacked
+                    ? `flex-1 min-h-[34vh] ${isActive ? "flex-[1.15]" : ""}`
+                    : `flex-1 ${isActive ? "flex-[1.2]" : ""}`
+                }
               `}
               onMouseEnter={() => setHovered(side)}
               onMouseLeave={() => setHovered(null)}
@@ -164,12 +179,18 @@ export default function VisualComparison({ question, onAnswer }: Props) {
 
               {/* Content */}
               <div className="relative z-10 text-center px-8 py-8 max-w-xs">
-                <h3 className="text-2xl font-bold text-white mb-3">{data.label}</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {data.label}
+                </h3>
                 <p
                   className={`text-white/90 text-sm leading-relaxed transition-all duration-300
-                    ${isStacked
-                      ? 'opacity-100'
-                      : isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+                    ${
+                      isStacked
+                        ? "opacity-100"
+                        : isActive
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-2"
+                    }`}
                 >
                   {data.description}
                 </p>
@@ -186,7 +207,7 @@ export default function VisualComparison({ question, onAnswer }: Props) {
                 }}
                 transition={{ duration: 0.2 }}
               >
-                {isStacked ? 'Tap to choose →' : 'Choose this →'}
+                {isStacked ? "Tap to choose →" : "Choose this →"}
               </motion.div>
             </motion.button>
           );

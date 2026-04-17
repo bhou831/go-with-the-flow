@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import DimensionBars from './DimensionBars';
-import type { City, DimensionVector } from '@/lib/types';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import DimensionBars from "./DimensionBars";
+import type { City, DimensionVector } from "@/lib/types";
 
 interface Props {
   city: City;
@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function CityReveal({ city, userVector, topCities }: Props) {
-  const letters = city.name.split('');
+  const letters = city.name.split("");
 
   return (
     <motion.main
@@ -45,9 +45,9 @@ export default function CityReveal({ city, userVector, topCities }: Props) {
                 duration: 0.35,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              style={{ display: letter === ' ' ? 'inline' : 'inline-block' }}
+              style={{ display: letter === " " ? "inline" : "inline-block" }}
             >
-              {letter === ' ' ? '\u00A0' : letter}
+              {letter === " " ? "\u00A0" : letter}
             </motion.span>
           ))}
         </h1>
@@ -57,7 +57,10 @@ export default function CityReveal({ city, userVector, topCities }: Props) {
           className="text-white/50 text-sm mb-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 + letters.length * 0.06 + 0.1, duration: 0.4 }}
+          transition={{
+            delay: 0.5 + letters.length * 0.06 + 0.1,
+            duration: 0.4,
+          }}
         >
           {city.country}
         </motion.p>
@@ -93,8 +96,12 @@ export default function CityReveal({ city, userVector, topCities }: Props) {
                   className="rounded-2xl p-4 text-center bg-white/10"
                 >
                   <p className="text-white/60 text-xs mb-1">#{i + 2}</p>
-                  <p className="text-white font-bold text-lg leading-tight">{runnerUp.name}</p>
-                  <p className="text-white/60 text-xs mt-1">{runnerUp.country}</p>
+                  <p className="text-white font-bold text-lg leading-tight">
+                    {runnerUp.name}
+                  </p>
+                  <p className="text-white/60 text-xs mt-1">
+                    {runnerUp.country}
+                  </p>
                 </div>
               ))}
             </div>
@@ -113,11 +120,13 @@ export default function CityReveal({ city, userVector, topCities }: Props) {
             className="inline-block bg-white/20 hover:bg-white/30 text-white
                        px-8 py-3 rounded-2xl font-semibold text-sm transition-colors duration-150
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-            style={{ ['--tw-ring-offset-color' as string]: city.accentColor }}
+            style={{ ["--tw-ring-offset-color" as string]: city.accentColor }}
           >
             Start Over
           </Link>
-          <p className="text-white/30 text-xs">Share your result — copy the URL!</p>
+          <p className="text-white/30 text-xs">
+            Share your result — copy the URL!
+          </p>
         </motion.div>
       </div>
     </motion.main>

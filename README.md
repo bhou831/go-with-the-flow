@@ -39,7 +39,7 @@ export interface ComparisonSide {
   label: string;
   description: string;
   bgClass: string;
-  imageSrc?: string;      // ← add this
+  imageSrc?: string; // ← add this
   weights: AnswerWeight[];
 }
 ```
@@ -52,7 +52,11 @@ The Zod schema in `src/lib/validation.ts` already includes `imageSrc: z.string()
 // Replace the overlay structure with:
 <div className="absolute inset-0">
   {data.imageSrc ? (
-    <img src={data.imageSrc} alt={data.label} className="w-full h-full object-cover" />
+    <img
+      src={data.imageSrc}
+      alt={data.label}
+      className="w-full h-full object-cover"
+    />
   ) : (
     <div className={`w-full h-full ${data.bgClass}`} />
   )}
@@ -121,20 +125,40 @@ All question content lives in **`src/data/questions.json`**. No code changes are
   "type": "multi-choice-grid",
   "prompt": "How do you start your morning?",
   "options": [
-    { "id": "coffee-shop", "label": "Coffee Shop", "icon": "☕", "weights": [{ "dimension": "vibe",    "value": 8 }] },
-    { "id": "gym",         "label": "Gym",          "icon": "🏋️", "weights": [{ "dimension": "density", "value": 6 }] },
-    { "id": "home",        "label": "Home Office",  "icon": "🏠", "weights": [{ "dimension": "cost",    "value": 7 }] },
-    { "id": "commute",     "label": "On the Go",    "icon": "🚌", "weights": [{ "dimension": "transit", "value": 9 }] }
+    {
+      "id": "coffee-shop",
+      "label": "Coffee Shop",
+      "icon": "☕",
+      "weights": [{ "dimension": "vibe", "value": 8 }]
+    },
+    {
+      "id": "gym",
+      "label": "Gym",
+      "icon": "🏋️",
+      "weights": [{ "dimension": "density", "value": 6 }]
+    },
+    {
+      "id": "home",
+      "label": "Home Office",
+      "icon": "🏠",
+      "weights": [{ "dimension": "cost", "value": 7 }]
+    },
+    {
+      "id": "commute",
+      "label": "On the Go",
+      "icon": "🚌",
+      "weights": [{ "dimension": "transit", "value": 9 }]
+    }
   ]
 }
 ```
 
 **Weight guidelines:**
 
-| Rule | Why |
-|---|---|
-| Touch at least 2 of the 5 dimensions | Untouched dimensions default to 5 (neutral) — single-dimension questions have weak influence |
-| Keep `value` between 0 and 10 | Zod will throw a build-time error if you go outside this range |
+| Rule                                                          | Why                                                                                                    |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Touch at least 2 of the 5 dimensions                          | Untouched dimensions default to 5 (neutral) — single-dimension questions have weak influence           |
+| Keep `value` between 0 and 10                                 | Zod will throw a build-time error if you go outside this range                                         |
 | Valid dimensions: `transit` `density` `vibe` `cost` `climate` | Typos (e.g. `"tranit"`) are caught by Zod at startup and will crash the survey page with a clear error |
 
 **Verify:**
@@ -156,7 +180,7 @@ The `ElevatorMiniGame` is a self-contained component with its own internal phase
 
 ```ts
 export interface MapTapQuestion extends BaseQuestion {
-  type: 'map-tap';
+  type: "map-tap";
   sceneLabel: string;
   zones: MapZone[];
 }
@@ -173,7 +197,7 @@ export type Question =
   | VisualComparisonQuestion
   | MultiChoiceGridQuestion
   | ElevatorMiniGameQuestion
-  | MapTapQuestion;          // ← new
+  | MapTapQuestion; // ← new
 ```
 
 **Step 2 — Add a Zod schema to `src/lib/validation.ts`**
@@ -188,7 +212,7 @@ const MapZoneSchema = z.object({
 
 const MapTapSchema = z.object({
   id: z.string().min(1),
-  type: z.literal('map-tap'),
+  type: z.literal("map-tap"),
   prompt: z.string().min(1),
   sceneLabel: z.string().min(1),
   zones: z.array(MapZoneSchema).min(2),
@@ -196,12 +220,12 @@ const MapTapSchema = z.object({
 
 // Add to QuestionsSchema:
 export const QuestionsSchema = z.array(
-  z.discriminatedUnion('type', [
+  z.discriminatedUnion("type", [
     VisualComparisonSchema,
     MultiChoiceGridSchema,
     MiniGameSchema,
-    MapTapSchema,          // ← new
-  ])
+    MapTapSchema, // ← new
+  ]),
 );
 ```
 
@@ -210,11 +234,11 @@ export const QuestionsSchema = z.array(
 Every mini-game component must satisfy this contract:
 
 ```tsx
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import type { MapTapQuestion, AnswerWeight } from '@/lib/types';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import type { MapTapQuestion, AnswerWeight } from "@/lib/types";
 
 // Contract: receive the typed question + onAnswer callback
 interface Props {
@@ -223,15 +247,15 @@ interface Props {
 }
 
 // Keep phase state LOCAL (useState) — not in the reducer
-type Phase = 'idle' | 'chosen';
+type Phase = "idle" | "chosen";
 
 export default function MapTapGame({ question, onAnswer }: Props) {
-  const [phase, setPhase] = useState<Phase>('idle');
+  const [phase, setPhase] = useState<Phase>("idle");
   const [chosen, setChosen] = useState<(typeof question.zones)[0] | null>(null);
 
   // Gate onAnswer behind a delay so reveal text can be read
   useEffect(() => {
-    if (phase === 'chosen' && chosen) {
+    if (phase === "chosen" && chosen) {
       const t = setTimeout(() => onAnswer(chosen.id, chosen.weights), 1600);
       return () => clearTimeout(t);
     }
@@ -239,16 +263,28 @@ export default function MapTapGame({ question, onAnswer }: Props) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-6">
-      <h2 className="text-2xl font-bold text-stone-900 text-center mb-8">{question.prompt}</h2>
+      <h2 className="text-2xl font-bold text-stone-900 text-center mb-8">
+        {question.prompt}
+      </h2>
       {/* your scene UI */}
-      {phase === 'idle' && question.zones.map(zone => (
-        <button key={zone.id} onClick={() => { setChosen(zone); setPhase('chosen'); }}>
-          {zone.label}
-        </button>
-      ))}
+      {phase === "idle" &&
+        question.zones.map((zone) => (
+          <button
+            key={zone.id}
+            onClick={() => {
+              setChosen(zone);
+              setPhase("chosen");
+            }}
+          >
+            {zone.label}
+          </button>
+        ))}
       <AnimatePresence>
-        {phase === 'chosen' && chosen && (
-          <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
+        {phase === "chosen" && chosen && (
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             {chosen.revealText}
           </motion.p>
         )}

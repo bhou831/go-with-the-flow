@@ -1,5 +1,5 @@
-import { Suspense } from 'react';
-import ResultsContent from '@/components/results/ResultsContent';
+import { Suspense } from "react";
+import ResultsContent from "@/components/results/ResultsContent";
 
 export default function ResultsPage() {
   return (

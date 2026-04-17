@@ -1,30 +1,46 @@
-'use client';
+"use client";
 
-import { useReducer, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { surveyReducer, initialSurveyState } from '@/lib/survey-reducer';
-import type { Question, AnswerWeight } from '@/lib/types';
+import { useReducer, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { surveyReducer, initialSurveyState } from "@/lib/survey-reducer";
+import { clearResultCache } from "@/lib/result-cache";
+import type { Question, AnswerWeight } from "@/lib/types";
 
 export function useSurveyState(questions: Question[]) {
   const [state, dispatch] = useReducer(surveyReducer, initialSurveyState);
   const router = useRouter();
 
+  // Retaking the quiz — wipe any cached result so the landing page stops
+  // auto-redirecting until we produce a fresh one.
   useEffect(() => {
-    if (state.phase === 'done') {
+    clearResultCache();
+  }, []);
+
+  useEffect(() => {
+    if (state.phase === "done") {
       const encoded = btoa(JSON.stringify(state.answers));
       router.push(`/results?a=${encoded}`);
     }
   }, [state.phase, state.answers, router]);
 
-  const handleAnswer = (questionId: string, selectedId: string, weights: AnswerWeight[]) => {
+  const handleAnswer = (
+    questionId: string,
+    selectedId: string,
+    weights: AnswerWeight[],
+  ) => {
     dispatch({
-      type: 'ANSWER',
-      payload: { questionId, selectedId, weights, totalQuestions: questions.length },
+      type: "ANSWER",
+      payload: {
+        questionId,
+        selectedId,
+        weights,
+        totalQuestions: questions.length,
+      },
     });
   };
 
-  const goBack = () => dispatch({ type: 'BACK' });
-  const reset  = () => dispatch({ type: 'RESET' });
+  const goBack = () => dispatch({ type: "BACK" });
+  const reset = () => dispatch({ type: "RESET" });
 
   return {
     currentQuestion: questions[state.currentIndex] ?? null,

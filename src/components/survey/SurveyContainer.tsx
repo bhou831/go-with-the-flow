@@ -1,13 +1,20 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useSurveyState } from '@/hooks/useSurveyState';
-import ProgressBar from './ProgressBar';
-import VisualComparison from './VisualComparison';
-import MultiChoiceGrid from './MultiChoiceGrid';
-import ElevatorMiniGame from './ElevatorMiniGame';
-import type { Question, AnswerWeight, VisualComparisonQuestion, MultiChoiceGridQuestion, ElevatorMiniGameQuestion } from '@/lib/types';
+import { useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useSurveyState } from "@/hooks/useSurveyState";
+import ProgressBar from "./ProgressBar";
+import VisualComparison from "./VisualComparison";
+import MultiChoiceGrid from "./MultiChoiceGrid";
+import ElevatorMiniGame from "./ElevatorMiniGame";
+import type {
+  Question,
+  AnswerWeight,
+  VisualComparisonQuestion,
+  MultiChoiceGridQuestion,
+  ElevatorMiniGameQuestion,
+} from "@/lib/types";
+import { triggerHaptic } from "@/lib/haptic";
 
 // dir: 1 = forward (answer), -1 = backward (back button)
 const questionTransitionVariants = {
@@ -20,7 +27,7 @@ const questionTransitionVariants = {
   exit: (dir: number) => ({
     opacity: 0,
     x: dir * -40,
-    transition: { duration: 0.22, ease: 'easeIn' as const },
+    transition: { duration: 0.22, ease: "easeIn" as const },
   }),
 };
 
@@ -34,22 +41,45 @@ function assertNever(x: never): never {
   throw new Error(`Unhandled question type: ${(x as { type: string }).type}`);
 }
 
-function renderQuestion(question: Question, onAnswer: (id: string, weights: AnswerWeight[]) => void) {
+function renderQuestion(
+  question: Question,
+  onAnswer: (id: string, weights: AnswerWeight[]) => void,
+) {
   switch (question.type) {
-    case 'visual-comparison':
-      return <VisualComparison question={question as VisualComparisonQuestion} onAnswer={onAnswer} />;
-    case 'multi-choice-grid':
-      return <MultiChoiceGrid question={question as MultiChoiceGridQuestion} onAnswer={onAnswer} />;
-    case 'mini-game':
-      return <ElevatorMiniGame question={question as ElevatorMiniGameQuestion} onAnswer={onAnswer} />;
+    case "visual-comparison":
+      return (
+        <VisualComparison
+          question={question as VisualComparisonQuestion}
+          onAnswer={onAnswer}
+        />
+      );
+    case "multi-choice-grid":
+      return (
+        <MultiChoiceGrid
+          question={question as MultiChoiceGridQuestion}
+          onAnswer={onAnswer}
+        />
+      );
+    case "mini-game":
+      return (
+        <ElevatorMiniGame
+          question={question as ElevatorMiniGameQuestion}
+          onAnswer={onAnswer}
+        />
+      );
     default:
       return assertNever(question);
   }
 }
 
 export default function SurveyContainer({ questions }: SurveyContainerProps) {
-  const { currentQuestion, currentIndex, totalQuestions, handleAnswer, goBack } =
-    useSurveyState(questions);
+  const {
+    currentQuestion,
+    currentIndex,
+    totalQuestions,
+    handleAnswer,
+    goBack,
+  } = useSurveyState(questions);
 
   // Track nav direction so the slide animation matches movement direction
   const direction = useRef(1);
@@ -68,6 +98,7 @@ export default function SurveyContainer({ questions }: SurveyContainerProps) {
   };
 
   const onBack = () => {
+    triggerHaptic();
     direction.current = -1;
     goBack();
   };
@@ -93,8 +124,14 @@ export default function SurveyContainer({ questions }: SurveyContainerProps) {
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-400"
           >
             <svg
-              width="16" height="16" viewBox="0 0 16 16" fill="none"
-              stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               aria-hidden="true"
             >
               <path d="M10 12L6 8l4-4" />

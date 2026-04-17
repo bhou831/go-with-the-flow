@@ -95,29 +95,29 @@ Landing (/) → /survey
 
 Each question in `questions.json` has a `type` field that routes to the matching component:
 
-| `type` | Component | Behavior |
-|---|---|---|
-| `visual-comparison` | `VisualComparison` | Two panels; click either side to advance |
-| `multi-choice-grid` | `MultiChoiceGrid` | Grid/column of cards; click one to advance |
-| `mini-game` | `ElevatorMiniGame` | Animated elevator scene; 1600ms delay before advancing |
+| `type`              | Component          | Behavior                                               |
+| ------------------- | ------------------ | ------------------------------------------------------ |
+| `visual-comparison` | `VisualComparison` | Two panels; click either side to advance               |
+| `multi-choice-grid` | `MultiChoiceGrid`  | Grid/column of cards; click one to advance             |
+| `mini-game`         | `ElevatorMiniGame` | Animated elevator scene; 1600ms delay before advancing |
 
 All question components receive `onAnswer(selectedId, weights)` — calling it dispatches `ANSWER` to the reducer. Components are display-only; all scoring weights live in `questions.json`.
 
 ### `VisualComparison` layouts
 
-| `layout` | Description |
-|---|---|
-| `side-by-side` (default) | Two full-height panels side by side; hover to expand |
-| `stacked` | Two full-height panels stacked top/bottom; always-visible CTA |
-| `card-stack` | Two centered cards (image on top, label + description below); mobile-first |
+| `layout`                 | Description                                                                |
+| ------------------------ | -------------------------------------------------------------------------- |
+| `side-by-side` (default) | Two full-height panels side by side; hover to expand                       |
+| `stacked`                | Two full-height panels stacked top/bottom; always-visible CTA              |
+| `card-stack`             | Two centered cards (image on top, label + description below); mobile-first |
 
 ### `MultiChoiceGrid` layouts
 
-| `layout` | Description |
-|---|---|
-| `grid` (default) | 2- or 3-column card grid (image on top, label below) |
-| `single-column` | 1-column horizontal cards (icon/image left, label + optional description right) |
-| `card-column` | 1-column full-width cards (image on top, label below) — use for portrait/landscape images |
+| `layout`         | Description                                                                               |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| `grid` (default) | 2- or 3-column card grid (image on top, label below)                                      |
+| `single-column`  | 1-column horizontal cards (icon/image left, label + optional description right)           |
+| `card-column`    | 1-column full-width cards (image on top, label below) — use for portrait/landscape images |
 
 ### `GridOption` fields
 

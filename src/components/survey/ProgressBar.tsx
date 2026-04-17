@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 interface ProgressBarProps {
   current: number;
@@ -14,7 +14,7 @@ export default function ProgressBar({ current, total }: ProgressBarProps) {
         className="h-full bg-stone-800"
         style={{ originX: 0 }}
         animate={{ scaleX: current / total }}
-        transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+        transition={{ type: "spring", stiffness: 120, damping: 20 }}
       />
     </div>
   );

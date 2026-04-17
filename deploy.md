@@ -23,26 +23,27 @@ git push -u origin main
 
 ### 3. Configure build settings
 
-| Field | Value |
-|---|---|
-| Framework preset | `None` (do **not** pick Next.js — that's for SSR mode) |
-| Build command | `npm run build` |
-| Build output directory | `out` |
-| Root directory | *(leave blank)* |
+| Field                  | Value                                                  |
+| ---------------------- | ------------------------------------------------------ |
+| Framework preset       | `None` (do **not** pick Next.js — that's for SSR mode) |
+| Build command          | `npm run build`                                        |
+| Build output directory | `out`                                                  |
+| Root directory         | _(leave blank)_                                        |
 
 ### 4. Set Node.js version
 
 Under **Environment variables**, add:
 
-| Variable | Value |
-|---|---|
-| `NODE_VERSION` | `20` |
+| Variable       | Value |
+| -------------- | ----- |
+| `NODE_VERSION` | `20`  |
 
 > Node 18+ is required for the Next.js build. Without this, Cloudflare may use an older default.
 
 ### 5. Deploy
 
 Click **Save and Deploy**. Cloudflare will:
+
 1. Clone your repo
 2. Run `npm ci && npm run build`
 3. Upload the contents of `out/` to its CDN
