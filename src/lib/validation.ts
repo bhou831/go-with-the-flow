@@ -48,7 +48,7 @@ const MultiChoiceGridSchema = z.object({
   id: z.string().min(1),
   type: z.literal('multi-choice-grid'),
   prompt: z.string().min(1),
-  options: z.array(GridOptionSchema).min(3).max(4),
+  options: z.array(GridOptionSchema).min(2).max(4),
   layout: z.enum(['grid', 'single-column', 'card-column']).optional(),
   headerMedia: HeaderMediaSchema.optional(),
 });
