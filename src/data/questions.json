@@ -128,8 +128,9 @@
         "weights": [
           { "dimension": "balance", "value": 7 },
           { "dimension": "wellness", "value": 6 },
-          { "dimension": "tech", "value": 6 },
-          { "dimension": "hustle", "value": 2 }
+          { "dimension": "tech", "value": 3 },
+          { "dimension": "hustle", "value": 2 },
+          { "dimension": "pulse", "value": 2 }
         ]
       },
       {
@@ -140,7 +141,8 @@
           { "dimension": "nature", "value": 8 },
           { "dimension": "wellness", "value": 8 },
           { "dimension": "climate", "value": 7 },
-          { "dimension": "pulse", "value": 3 }
+          { "dimension": "pulse", "value": 3 },
+          { "dimension": "tech", "value": 3 }
         ]
       },
       {
@@ -230,7 +232,8 @@
           { "dimension": "balance", "value": 8 },
           { "dimension": "openness", "value": 7 },
           { "dimension": "culture", "value": 6 },
-          { "dimension": "wellness", "value": 2 }
+          { "dimension": "wellness", "value": 2 },
+          { "dimension": "tech", "value": 2 }
         ]
       }
     ]
@@ -259,7 +262,8 @@
           { "dimension": "balance", "value": 8 },
           { "dimension": "aesthetics", "value": 8 },
           { "dimension": "nature", "value": 7 },
-          { "dimension": "hustle", "value": 2 }
+          { "dimension": "hustle", "value": 2 },
+          { "dimension": "pulse", "value": 3 }
         ]
       },
       {
@@ -288,7 +292,8 @@
         "weights": [
           { "dimension": "density", "value": 10 },
           { "dimension": "transit", "value": 8 },
-          { "dimension": "cost", "value": 5 }
+          { "dimension": "cost", "value": 2 },
+          { "dimension": "pulse", "value": 7 }
         ]
       },
       {
@@ -391,7 +396,8 @@
           { "dimension": "career", "value": 8 },
           { "dimension": "hustle", "value": 8 },
           { "dimension": "tech", "value": 7 },
-          { "dimension": "balance", "value": 2 }
+          { "dimension": "balance", "value": 2 },
+          { "dimension": "pulse", "value": 7 }
         ]
       },
       {
@@ -424,10 +430,11 @@
         "image": "/luggage.jpg",
         "imageAspect": "square",
         "weights": [
-          { "dimension": "balance", "value": 8 },
-          { "dimension": "nature", "value": 8 },
-          { "dimension": "climate", "value": 7 },
-          { "dimension": "hustle", "value": 2 }
+          { "dimension": "balance", "value": 7 },
+          { "dimension": "nature", "value": 5 },
+          { "dimension": "climate", "value": 5 },
+          { "dimension": "hustle", "value": 2 },
+          { "dimension": "pulse", "value": 2 }
         ]
       }
     ]
@@ -532,7 +539,9 @@
           { "dimension": "nightlife", "value": 9 },
           { "dimension": "pulse", "value": 8 },
           { "dimension": "openness", "value": 7 },
-          { "dimension": "balance", "value": 2 }
+          { "dimension": "balance", "value": 2 },
+          { "dimension": "nature", "value": 2 },
+          { "dimension": "density", "value": 8 }
         ]
       },
       {
@@ -552,7 +561,9 @@
         "weights": [
           { "dimension": "balance", "value": 9 },
           { "dimension": "wellness", "value": 8 },
-          { "dimension": "nightlife", "value": 2 }
+          { "dimension": "nightlife", "value": 2 },
+          { "dimension": "culture", "value": 3 },
+          { "dimension": "pulse", "value": 2 }
         ]
       }
     ]
@@ -570,7 +581,8 @@
         "weights": [
           { "dimension": "pulse", "value": 9 },
           { "dimension": "density", "value": 8 },
-          { "dimension": "nightlife", "value": 7 }
+          { "dimension": "nightlife", "value": 7 },
+          { "dimension": "nature", "value": 2 }
         ]
       },
       {
@@ -618,7 +630,8 @@
         "weights": [
           { "dimension": "diversity", "value": 9 },
           { "dimension": "culture", "value": 8 },
-          { "dimension": "openness", "value": 8 }
+          { "dimension": "openness", "value": 8 },
+          { "dimension": "nightlife", "value": 6 }
         ]
       },
       {
@@ -638,7 +651,9 @@
         "weights": [
           { "dimension": "pulse", "value": 8 },
           { "dimension": "nightlife", "value": 7 },
-          { "dimension": "aesthetics", "value": 7 }
+          { "dimension": "aesthetics", "value": 7 },
+          { "dimension": "density", "value": 8 },
+          { "dimension": "nature", "value": 3 }
         ]
       },
       {
@@ -649,7 +664,8 @@
           { "dimension": "career", "value": 8 },
           { "dimension": "hustle", "value": 7 },
           { "dimension": "balance", "value": 8 },
-          { "dimension": "pulse", "value": 1 }
+          { "dimension": "pulse", "value": 1 },
+          { "dimension": "nightlife", "value": 2 }
         ]
       }
     ]
@@ -736,7 +752,8 @@
         { "dimension": "career", "value": 9 },
         { "dimension": "safety", "value": 8 },
         { "dimension": "hustle", "value": 8 },
-        { "dimension": "pulse", "value": 3 }
+        { "dimension": "pulse", "value": 3 },
+        { "dimension": "culture", "value": 3 }
       ]
     },
     "right": {
@@ -959,7 +976,8 @@
           { "dimension": "pulse", "value": 8 },
           { "dimension": "culture", "value": 7 },
           { "dimension": "aesthetics", "value": 7 },
-          { "dimension": "nature", "value": 2 }
+          { "dimension": "nature", "value": 2 },
+          { "dimension": "climate", "value": 3 }
         ]
       }
     ]
@@ -1002,7 +1020,9 @@
           { "dimension": "hustle", "value": 9 },
           { "dimension": "career", "value": 8 },
           { "dimension": "transit", "value": 8 },
-          { "dimension": "aesthetics", "value": 3 }
+          { "dimension": "aesthetics", "value": 3 },
+          { "dimension": "cost", "value": 3 },
+          { "dimension": "pulse", "value": 7 }
         ]
       },
       {
@@ -1014,7 +1034,9 @@
           { "dimension": "nature", "value": 9 },
           { "dimension": "safety", "value": 7 },
           { "dimension": "balance", "value": 7 },
-          { "dimension": "transit", "value": 1 }
+          { "dimension": "transit", "value": 1 },
+          { "dimension": "cost", "value": 7 },
+          { "dimension": "density", "value": 2 }
         ]
       }
     ]
@@ -1032,7 +1054,8 @@
         "weights": [
           { "dimension": "density", "value": 9 },
           { "dimension": "openness", "value": 8 },
-          { "dimension": "pulse", "value": 7 }
+          { "dimension": "pulse", "value": 7 },
+          { "dimension": "nature", "value": 2 }
         ]
       },
       {
@@ -1091,7 +1114,8 @@
           { "dimension": "density", "value": 3 },
           { "dimension": "transit", "value": 2 },
           { "dimension": "hustle", "value": 6 },
-          { "dimension": "balance", "value": 5 }
+          { "dimension": "balance", "value": 5 },
+          { "dimension": "cost", "value": 7 }
         ]
       },
       {
@@ -1138,7 +1162,7 @@
         "label": "Four distinct seasons — I need the variety",
         "icon": "🍂",
         "weights": [
-          { "dimension": "climate", "value": 5 },
+          { "dimension": "climate", "value": 3 },
           { "dimension": "nature", "value": 8 },
           { "dimension": "culture", "value": 7 }
         ]
